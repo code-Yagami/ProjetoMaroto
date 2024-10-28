@@ -1,4 +1,4 @@
-# PD Case Projeto Front-End
+# Projeto PD Sistema Frontend
 
 Este é um projeto de front-end desenvolvido em Angular 17.3.11 e Node.js 20.18.0, projetado para uma equipe de desenvolvedores juniores. Este documento fornece informações completas sobre as versões escolhidas, configuração do ambiente de desenvolvimento, uso do Git e boas práticas de trabalho em equipe.
 
