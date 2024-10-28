@@ -1,94 +1,155 @@
-# pd-sistema-frontend
+# PD Case Projeto Front-End
 
+Este é um projeto de front-end desenvolvido em Angular 17.3.11 e Node.js 20.18.0, projetado para uma equipe de desenvolvedores juniores. Este documento fornece informações completas sobre as versões escolhidas, configuração do ambiente de desenvolvimento, uso do Git e boas práticas de trabalho em equipe.
 
+Optamos por **Angular 17.3.11** e **Node.js 20.18.0 LTS** para garantir compatibilidade e estabilidade. A versão 17.3.11 do Angular inclui melhorias de performance, segurança e escalabilidade que atendem às necessidades do projeto. A versão 20.18.0 do Node.js é a mais recente versão LTS (Long Term Support), garantindo suporte estendido, correções de segurança e confiabilidade em produção.
 
-## Getting started
+## Configuração do Ambiente de Desenvolvimento
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+Para garantir que todos os desenvolvedores utilizem a mesma versão do Node.js, recomendamos o uso do **NVM (Node Version Manager)** para gerenciar versões do Node.js. Abaixo estão as instruções detalhadas para configurar o NVM no Windows, além da instalação do Angular CLI.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Instalando o NVM no Windows
 
-## Add your files
+1. Baixe o instalador do NVM para Windows:
+   - Acesse [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) e baixe a versão mais recente do instalador (`nvm-setup.zip`).
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+2. Execute o instalador e siga as instruções. Certifique-se de instalar o NVM em um diretório diferente do diretório de instalação do Node.js para evitar conflitos.
 
+3. Após a instalação, abra um novo terminal e verifique a versão do NVM:
+
+```bash
+nvm version
 ```
-cd existing_repo
-git remote add origin https://www.pdcase.com/git/julio.pereira/pd-sistema-frontend.git
-git branch -M main
-git push -uf origin main
 
+Instalando e Usando a Versão Correta do Node.js
+Instale a versão LTS do Node.js que estamos utilizando no projeto (20.18.0):
+
+```bash
+nvm install 20.18.0
 ```
 
-## Integrate with your tools
+Defina essa versão como a ativa no ambiente:
 
-- [ ] [Set up project integrations](https://www.pdcase.com/git/julio.pereira/pd-sistema-frontend/-/settings/integrations)
+```bash
+nvm use 20.18.0
+```
 
-## Collaborate with your team
+Verifique se a versão correta do Node.js está ativa:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+```bash
+node -v
+```
 
-## Test and Deploy
+Instalando o Angular CLI
+Após configurar a versão correta do Node.js, instale o Angular CLI para facilitar o desenvolvimento Angular:
 
-Use the built-in continuous integration in GitLab.
+```bash
+npm install -g @angular/cli@17.3.11
+```
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Clonando o Projeto e Instalando Dependências
 
-***
+Passo 1: Clonar o Repositório
 
-# Editing this README
+Para clonar o repositório em seu diretório local, execute:
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+```bash
+git clone https://github.com/sua-organizacao/nome-do-projeto.git
+```
 
-## Suggestions for a good README
+Passo 2: Navegar para o Diretório do Projeto
+Acesse o diretório clonado:
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+```bash
+cd nome-do-projeto
+```
 
-## Name
-Choose a self-explaining name for your project.
+Passo 3: Instalar as Dependências
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+IMPORTANTE: Antes de instalar as dependências, confirme que está usando a versão correta do Node.js. Em alguns sistemas Windows, a execução do npm install pode exigir privilégios de administrador para evitar erros de instalação. Se necessário, abra o terminal como administrador.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Para instalar as dependências:
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+```bash
+npm install
+```
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Este comando instalará todas as dependências do package.json no diretório node_modules, que é necessário para o projeto rodar corretamente.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+## Estrutura de Branches no Git
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Para manter a organização e a clareza no trabalho em equipe, utilizaremos uma estrutura de branches com nomenclatura específica:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- **main**: branch principal de produção, contendo a versão estável para deploy.
+- **homologacao**: branch para desenvolvimento ativo e testes antes da integração na main.
+- **feature**: branches curtas para novas funcionalidades ou melhorias. Removidas após o merge.
+- **bugfix**: branches dedicadas a corrigir bugs específicos.
+- **release**: branches usadas para preparar versões do projeto antes de lançar.
+- **developer**: branches específicas para cada desenvolvedor trabalhar isoladamente.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## Convenção de Commits
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Para padronizar a escrita de commits e manter um histórico organizado, seguimos a seguinte convenção:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- **feat**: Adição de uma nova funcionalidade ou serviço. 
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+    ```bash
+    feat: criação do componente de login
+    ```
 
-## License
-For open source projects, say how it is licensed.
+- **fix**: Correção de bugs no sistema.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+    ```bash
+    fix: correção na função de autenticação
+    ```
+
+- **refactor**: Refatoração de código sem mudanças na lógica.
+
+    ```bash
+    refactor: renomear função de validação
+    ```
+
+- **test**: Criação ou modificação de testes.
+
+    ```bash
+    test: adicionar teste unitário para o componente de header
+    ```
+
+- **docs**: Alterações na documentação do projeto.
+
+    ```bash
+    docs: atualizar instruções de instalação no README
+    ```
+
+**Boas Práticas de Commits:**
+
+- Commits Atômicos: Cada commit deve representar uma mudança única e lógica, facilitando o rastreamento e a reversão de alterações. Evite misturar correções de bugs com novas funcionalidades.
+- Commits Pequenos e Frequentes: Preferimos commits menores e frequentes para que o histórico de desenvolvimento seja fácil de revisar e gerenciar.
+
+## Executando o Projeto
+
+Para iniciar o servidor de desenvolvimento primeiro certifique-se de estar no diretório do projeto e depois execute o comando:
+
+```bash
+ng serve
+```
+
+Acesse a aplicação no navegador em http://localhost:4200. O servidor recarregará automaticamente sempre que houver alterações no código.
+
+Contribuindo
+
+Crie uma branch para sua funcionalidade ou correção de bug:
+
+```bash
+git checkout -b feature/nome-da-feature
+```
+
+Commit e push das suas alterações para o repositório:
+
+```bash
+git add .
+git commit -m "feat: descrição da feature"
+git push origin feature/nome-da-feature
+```
+
+Abra um pull request para a branch principal no GitLab.
