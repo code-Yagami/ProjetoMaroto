@@ -1,10 +1,28 @@
 # Projeto PD Sistema Frontend
 
-Este é um projeto de front-end desenvolvido em Angular 17.3.11 e Node.js 20.18.0, projetado para uma equipe de desenvolvedores juniores. Este documento fornece informações completas sobre as versões escolhidas, configuração do ambiente de desenvolvimento, uso do Git e boas práticas de trabalho em equipe.
+## 📝 Descrição
 
-Optamos por **Angular 17.3.11** e **Node.js 20.18.0 LTS** para garantir compatibilidade e estabilidade. A versão 17.3.11 do Angular inclui melhorias de performance, segurança e escalabilidade que atendem às necessidades do projeto. A versão 20.18.0 do Node.js é a mais recente versão LTS (Long Term Support), garantindo suporte estendido, correções de segurança e confiabilidade em produção.
+Este é um projeto de front-end desenvolvido em Angular 17.3.11 e Node.js 20.18.0, projetado por uma equipe de desenvolvedores com o objetivo de renovar o sistema [PD Case ERP](https://www.pdcase.com/pderp/autentica/login.aspx?&retornoUrl=/pderp/home/default.aspx&queryUrl). Este documento fornece informações completas sobre as versões escolhidas, configuração do ambiente de desenvolvimento, uso do Git e boas práticas de trabalho em equipe.
 
-## Configuração do Ambiente de Desenvolvimento
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Tecnologias
+
+- **Angular 17.3.11**: Esta versão do Angular foi escolhida por suas melhorias em performance, segurança e escalabilidade, atendendo às demandas do projeto.
+
+    [![Angular][Angular.io]][Angular-url]
+
+- **Node.js 20.18.0 LTS**: A versão 20.18.0 do Node.js é a mais recente versão LTS (Long Term Support), oferecendo suporte estendido, correções de segurança e alta confiabilidade para ambientes de produção, assegurando estabilidade e compatibilidade com o Angular 17.3.11.
+
+    [![NodeJS][NodeJS.org]][NodeJS-url]
+
+- **Bootstrap 5**: Utilizaremos o Bootstrap 5 para facilitar a criação de uma interface de usuário responsiva e estilizada. A integração com o Angular garante uma experiência consistente e aprimora a agilidade no desenvolvimento do front-end.
+
+    [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⚙ Configuração
 
 Para garantir que todos os desenvolvedores utilizem a mesma versão do Node.js, recomendamos o uso do **NVM (Node Version Manager)** para gerenciar versões do Node.js. Abaixo estão as instruções detalhadas para configurar o NVM no Windows, além da instalação do Angular CLI.
 
@@ -40,7 +58,10 @@ Verifique se a versão correta do Node.js está ativa:
 node -v
 ```
 
-Instalando o Angular CLI
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Instalando o Angular CLI
+
 Após configurar a versão correta do Node.js, instale o Angular CLI para facilitar o desenvolvimento Angular:
 
 ```bash
@@ -54,40 +75,65 @@ Passo 1: Clonar o Repositório
 Para clonar o repositório em seu diretório local, execute:
 
 ```bash
-git clone https://github.com/sua-organizacao/nome-do-projeto.git
+git clone https://www.pdcase.com/git/julio.pereira/pd-sistema-frontend.git
 ```
 
 Passo 2: Navegar para o Diretório do Projeto
 Acesse o diretório clonado:
 
 ```bash
-cd nome-do-projeto
+cd pd-sistema-frontend
 ```
 
 Passo 3: Instalar as Dependências
 
-IMPORTANTE: Antes de instalar as dependências, confirme que está usando a versão correta do Node.js. Em alguns sistemas Windows, a execução do npm install pode exigir privilégios de administrador para evitar erros de instalação. Se necessário, abra o terminal como administrador.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Para instalar as dependências:
+## 💡 Importante
+
+Antes de executar o projeto, é essencial instalar os módulos Node necessários. Certifique-se de estar usando a versão correta do Node.js especificada pelo projeto, garantindo compatibilidade e funcionamento adequado. Em sistemas Windows, a execução do comando `npm install` pode exigir privilégios administrativos para evitar erros de instalação. Se necessário, abra o terminal com permissões de administrador.
+
+Para instalar as dependências execute o comando a seguir na pasta do projeto:
 
 ```bash
 npm install
 ```
 
-Este comando instalará todas as dependências do package.json no diretório node_modules, que é necessário para o projeto rodar corretamente.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Estrutura de Branches no Git
+## ☑ Padrões do Git
+
+### Estrutura das Branches
 
 Para manter a organização e a clareza no trabalho em equipe, utilizaremos uma estrutura de branches com nomenclatura específica:
 
 - **main**: branch principal de produção, contendo a versão estável para deploy.
 - **homologacao**: branch para desenvolvimento ativo e testes antes da integração na main.
-- **feature**: branches curtas para novas funcionalidades ou melhorias. Removidas após o merge.
-- **bugfix**: branches dedicadas a corrigir bugs específicos.
-- **release**: branches usadas para preparar versões do projeto antes de lançar.
-- **developer**: branches específicas para cada desenvolvedor trabalhar isoladamente.
+- **feat**: branches curtas para novas funcionalidades ou melhorias. Removidas após o merge.
 
-## Convenção de Commits
+```bash
+feat/nova-tela-login
+feat/adicionar-auth
+feat/melhorias-interface
+```
+
+- **fix**: branches dedicadas a corrigir bugs específicos.
+
+```bash
+fix/corrigir-erro-login
+fix/ajustar-tamanho-imagem
+```
+
+- **release**: branches usadas para preparar versões do projeto antes de lançar.
+
+```bash
+release/1.0.0
+release/v2.1
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Convenção de Commits
 
 Para padronizar a escrita de commits e manter um histórico organizado, seguimos a seguinte convenção:
 
@@ -121,12 +167,20 @@ Para padronizar a escrita de commits e manter um histórico organizado, seguimos
     docs: atualizar instruções de instalação no README
     ```
 
-**Boas Práticas de Commits:**
+### Boas Práticas 
 
 - Commits Atômicos: Cada commit deve representar uma mudança única e lógica, facilitando o rastreamento e a reversão de alterações. Evite misturar correções de bugs com novas funcionalidades.
 - Commits Pequenos e Frequentes: Preferimos commits menores e frequentes para que o histórico de desenvolvimento seja fácil de revisar e gerenciar.
 
-## Executando o Projeto
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔥 Executando o Projeto
+
+Antes de começar a editar o código, crie uma branch de desenvolvimento com o nome da sua funcionalidade ou correção de bug:
+
+```bash
+git checkout -b feat/nome-da-feat
+```
 
 Para iniciar o servidor de desenvolvimento primeiro certifique-se de estar no diretório do projeto e depois execute o comando:
 
@@ -136,20 +190,29 @@ ng serve
 
 Acesse a aplicação no navegador em http://localhost:4200. O servidor recarregará automaticamente sempre que houver alterações no código.
 
-Contribuindo
-
-Crie uma branch para sua funcionalidade ou correção de bug:
+Lembre-se de que, se houver algum erro, verifique se os módulos estão instalados. Caso não estejam, execute o seguinte comando:
 
 ```bash
-git checkout -b feature/nome-da-feature
+npm install
 ```
 
-Commit e push das suas alterações para o repositório:
+Após cada alteração efetiva é só fazer o commit e push das suas alterações para o repositório:
 
 ```bash
 git add .
 git commit -m "feat: descrição da feature"
-git push origin feature/nome-da-feature
+git push origin feat/nome-da-feat
 ```
 
-Abra um pull request para a branch principal no GitLab.
+Abra um pull request para a branch ```teste```.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Angular.io]:    https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]:   https://angular.io/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[NodeJS.org]:    https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white
+[NodeJS-url]:    https://nodejs.org/
