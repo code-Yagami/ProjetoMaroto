@@ -1,0 +1,39 @@
+.nav-pills {
+  .nav-item {
+    > .nav-link:hover {
+      background-color: #243650;
+    }
+
+    &:hover {
+      .submenu {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Estilização dos submenus para abrir à direita */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 200px;
+  background-color: #2a4059;
+  padding: 0;
+  list-style: none;
+
+  .nav-link {
+    color: #b0c4de;
+    padding: 10px;
+
+    &:hover {
+      background-color: #F4BC1D;
+      color: white;
+    }
+  }
+}
+
+.imgs{
+  background-color: #141B23;
+}
