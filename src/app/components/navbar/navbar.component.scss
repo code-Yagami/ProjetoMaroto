@@ -1,39 +1,40 @@
-.nav-pills {
-  .nav-item {
-    > .nav-link:hover {
-      background-color: #243650;
-    }
-
-    &:hover {
-      .submenu {
-        display: block;
-      }
-    }
-  }
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-/* Estilização dos submenus para abrir à direita */
-.submenu {
-  display: none;
+.dropdown-menu {
+  display: none; 
   position: absolute;
-  top: 0;
-  left: 100%;
-  min-width: 200px;
-  background-color: #2a4059;
-  padding: 0;
-  list-style: none;
-
-  .nav-link {
-    color: #b0c4de;
-    padding: 10px;
-
-    &:hover {
-      background-color: #F4BC1D;
-      color: white;
-    }
-  }
 }
 
-.imgs{
-  background-color: #141B23;
+.navbar {
+  background-color: #0B0E13 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa;
+}
+
+.dropdown-menu {
+  background-color: #243650;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-item:hover {
+  background-color: #F4BC1D;
+}
+
+.opcoes-menu:hover{
+  background-color: #243650;
+}
+
+.img-logo{
+  max-width: 100px;
 }
