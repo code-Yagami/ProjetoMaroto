@@ -3,14 +3,17 @@
 }
 
 .dropdown-menu {
-  display: none; 
+  display: none;
   position: absolute;
 }
 
 .navbar {
-  background-color: #0B0E13 !important;
-}
+  background-color: #161D26 !important;
 
+  .navbar-nav {
+    padding-right: 50px;
+  }
+}
 .navbar-nav .nav-link {
   color: #ffffff;
 }
