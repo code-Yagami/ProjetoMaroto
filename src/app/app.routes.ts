@@ -3,7 +3,7 @@ import { InicioComponent } from './routes/inicio/inicio.component';
 
 export const routes: Routes = [
   {
-    path: 'inicio',
+    path: 'erp/inicio',
     component: InicioComponent,
   },
 ];
