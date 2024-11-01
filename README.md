@@ -101,6 +101,14 @@ npm install
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🔗 Fluxo no Repositório Git
+
+A imagem a segui resume o fluxo e organização dentro do repositório remoto.
+
+![Texto alternativo](docs/imgs/resume-git-flow.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## ☑ Padrões do Git
 
 ### Estrutura das Branches
