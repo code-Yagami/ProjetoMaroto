@@ -2,10 +2,9 @@
   <div class="container main">
     <div class="row">
       <div class="col-md-6 left-side-menu d-flex flex-column align-items-center">
-        <img src="assets/images/logo-pdcase.png" alt="">
-
+        <img src="assets/images/logo-pdcase.png" alt="Logo">
         <div class="message">
-          <p>Mais de 30 ano de grandes projetos</p>
+          <p>Mais de 30 anos de grandes projetos</p>
         </div>
       </div>
 
@@ -14,24 +13,24 @@
           <header>Faça seu Login</header>
 
           <div class="input-field">
-            <input type="text" class="input" id="email" required="" autocomplete="off">
+            <input type="email" class="input" id="email" [(ngModel)]="email" name="email" required autocomplete="off">
             <label for="email">E-mail</label>
           </div>
 
           <div class="input-field">
-            <input type="password" class="input" id="pass" required="">
+            <input type="password" class="input" id="pass" [(ngModel)]="password" name="password" required (keyup.enter)="onLogin()">
             <label for="pass">Senha</label>
+            <div *ngIf="errorMessage" class="text-danger ">{{errorMessage}}</div>
           </div>
 
           <div class="input-field">
-            <input type="submit" class="submit" value="Entrar">
+            <button type="button" class="btn btn-warning" (click)="onLogin()"
+            [routerLink]="['pderp/inicio']" routerLinkActive="router-link-active" >
+              Entrar
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-
 </div>
-
