@@ -2,7 +2,7 @@
   <ul class="nav flex-column">
 
     <li class="nav-item item-img">
-      <a class="nav-link active" href="#">
+      <a class="nav-link active" [routerLink]="['/pderp/inicio']">
         <img src="assets/images/pderp-logo.png" class="img-fluid img-inicio" alt="...">
       </a>
     </li>
@@ -10,11 +10,11 @@
     <div class="risco"></div>
 
     <li class="nav-item submenu">
-      <a class="nav-link" href="#">
+      <a class="nav-link">
         Administração de Acesso
       </a>
       <ul class="dropdown">
-        <li><a href="#" class="nav-link">Alterar Senha</a></li>
+        <li><a [routerLink]="['/pderp/acesso/senha']" class="nav-link">Alterar Senha</a></li>
       </ul>
     </li>
 
