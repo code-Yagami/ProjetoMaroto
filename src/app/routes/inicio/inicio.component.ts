@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [HeaderComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.scss'
 })
