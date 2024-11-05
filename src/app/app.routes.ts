@@ -4,6 +4,7 @@ import { SenhaComponent } from './routes/administracao-acesso/senha/senha.compon
 import { LoginComponent } from './components/login/login.component';
 import { DespesaComponent } from './routes/financeiro/despesa/despesa.component';
 
+
 export const routes: Routes = [
   { path: '', redirectTo: 'pderp/login', pathMatch: 'full' },
   { path: 'pderp/login', component: LoginComponent },
