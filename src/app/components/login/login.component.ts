@@ -1,44 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
+  standalone: true,
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+export class LoginComponent {
+  email: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
-  constructor(private readonly fb: FormBuilder) {
-    this.loginForm = this.fb.group({
-      login: ['', Validators.required],
-      senhaAtual: ['', Validators.required],
-      novaSenha: ['', Validators.required],
-      confirmarNovaSenha: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
-    });
-  }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  onLogin() {
+    const validEmail = 'user';
+    const validPassword = '123';
 
-  get email() {
-    return this.loginForm.get('email');
-  }
-
-  get password() {
-    return this.loginForm.get('password');
-  }
-
-  onSubmit(): void {
-    if (this.loginForm.valid) {
-      const formData = this.loginForm.value;
-        console.log(this.loginForm.value);
-        console.log('Dados do Formulário:', formData);
-
+    if (this.email === validEmail && this.password === validPassword) {
+      this.router.navigate(['/pderp/inicio']);
     } else {
-
-      this.loginForm.markAllAsTouched();
+      this.errorMessage = 'E-mail ou senha inválidos!';
     }
   }
 }

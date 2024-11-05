@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from "./components/header/header.component";
+import { LoginComponent } from "./components/login/login.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterOutlet, HeaderComponent, LoginComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Meu App Angular';
-  description = 'Este é um exemplo de componente Angular.';
-
-  showMessage(): void {
-    alert('Bem-vindo ao meu app Angular!');
-  }
+  title = 'start-front-angular';
 }
-
