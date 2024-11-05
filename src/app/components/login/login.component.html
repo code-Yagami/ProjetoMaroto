@@ -19,7 +19,7 @@
           <header>Faça seu Login</header>
 
           <div class="input-field">
-            <input type="email" class="input" id="email" [(ngModel)]="email" name="email" required autocomplete="off">
+            <input type="email" class="input" id="email" [(ngModel)]="email" name="email" required autocomplete="off" [ngClass]="{'has-content': email}">
             <label for="email">E-mail</label>
           </div>
 

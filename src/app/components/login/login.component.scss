@@ -159,7 +159,8 @@ img {
   pointer-events: none;
   transition: .5s;
 }
-.input-field input:focus ~ label
+.input-field input:focus + label,
+.input-field .has-content + label
 {
   top: -10px;
   font-size: 13px;
