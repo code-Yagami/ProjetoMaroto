@@ -8,7 +8,7 @@
 
 .wrapper {
   background-image: url('/assets/images/background.png');
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 0 20px;
 }
@@ -25,6 +25,7 @@
   background-size: cover;
   border-radius: 10px 0 0 10px;
   position: relative;
+  background-image: url(../../../assets/images/background.png);
 }
 
 img {
@@ -223,6 +224,10 @@ img {
     display: none;
   }
 
+  .message_banner2{
+    display: none;
+  }
+
   .input-box {
 
     header {
@@ -237,7 +242,7 @@ img {
   .submit {
     margin-bottom: 25px;
   }
-  
+
     .row{
     padding: 0px;
   }
