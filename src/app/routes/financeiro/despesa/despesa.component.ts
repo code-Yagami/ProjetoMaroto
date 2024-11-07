@@ -19,14 +19,14 @@ export class DespesaComponent {
   colaborador: string | null = '';
 
   statusOptions = [
+    'Todos',
     'Redigido',
     'Autorizado coordenador',
     'Autorizado Gerência',
     'Autorizado Gerência regional',
     'Aprovado para pagamento',
     'Pago',
-    'Reprovada',
-    'Todos'
+    'Reprovada'
   ];
 
 }
