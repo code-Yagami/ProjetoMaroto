@@ -1,1 +1,9 @@
-<p>button-component works!</p>
+<button
+  type="button"
+  class="btn"
+  [ngClass]="{
+    'btn-warning': tipoBotao === 'primary',
+    'btn-secondary me-2': tipoBotao === 'secondary'
+  }">
+  {{ textoBotao }}
+</button>
