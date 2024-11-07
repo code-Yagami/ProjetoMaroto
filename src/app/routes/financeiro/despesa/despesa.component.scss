@@ -1,16 +1,41 @@
-.btn {
+.form-container {
+  background-color: #ffffff0d;
+  border-radius: 20px 20px;
+  box-shadow: 0 4px 8px #0000001a;
+  backdrop-filter: blur(10px);
+  padding-bottom: 100px;
+
+
+
+  .btn {
     position: absolute;
-    top: 270px;
-    left: 290px;
+    top: 210px;
+    left: 25px;
   }
 
-.table-responsive{
+  .table-responsive {
     position: relative;
-    top: 25px;
+    top: 40px;
     left: 25px;
     width: 1380px;
-}
+  }
 
-.pesq{
-    font:bolder;
+  .table-responsive {
+    border-radius: 5px;
+  }
+  
+  .fixed-footer {
+    position: relative;
+    top: -160px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }  
+
+  .btn-info {
+    left: 100px;
+  }
+
+  .form-label{
+    transition: .5s;
+  }
 }
