@@ -5,71 +5,93 @@
 
     <h4>Despesas</h4>
 
-    <form class="p-4 mb-4">
-      <div class="row mb-3">
-        <div class="col-md-4">
-          <label for="dataInicio" class="form-label">Data Início</label>
-          <input type="date" id="dataInicio" class="form-control" [(ngModel)]="dataInicio" name="dataInicio">
-        </div>
-        <div class="col-md-4">
-          <label for="dataFinal" class="form-label">Data Final</label>
-          <input type="date" id="dataFinal" class="form-control" [(ngModel)]="dataFinal" name="dataFinal">
+    <div class="form-container">
+      <form class="p-4 mb-4">
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="dataInicio" class="form-label">Data Início</label>
+            <input type="date" id="dataInicio" class="form-control" [(ngModel)]="dataInicio" name="dataInicio">
+          </div>
+          <div class="col-md-4">
+            <label for="dataFinal" class="form-label">Data Final</label>
+            <input type="date" id="dataFinal" class="form-control" [(ngModel)]="dataFinal" name="dataFinal">
+          </div>
+
+          <div class="col-md-4">
+            <label for="numero" class="form-label">Número</label>
+            <input type="number" id="numero" class="form-control" [(ngModel)]="numero" name="numero">
+          </div>
         </div>
 
-        <div class="col-md-4">
-          <label for="numero" class="form-label">Número</label>
-          <input type="number" id="numero" class="form-control" [(ngModel)]="numero" name="numero">
+        <div class="row mb-3 dropdown-content">
+          <div class="col-md-4">
+            <label for="status" class="form-label">Status</label>
+            <select id="status" class="form-control" [(ngModel)]="status" name="status">
+              <option value="">Selecione</option>
+              <option *ngFor="let stat of statusOptions" [value]="stat">{{ stat }}</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="colaborador" class="form-label">Colaborador</label>
+            <input type="text" id="colaborador" class="form-control" [(ngModel)]="colaborador" name="colaborador">
+          </div>
         </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-warning">Pesquisar</button>
+        </div>
+      </form>
+
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Data Início</th>
+              <th>Colaborador</th>
+              <th>Valor</th>
+              <th>Cliente - Projeto</th>
+              <th>Centro de Custo</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12345</td>
+              <td>2024-11-01</td>
+              <td>João Silva</td>
+              <td>R$ 1,500.00</td>
+              <td>Cliente A - Projeto X</td>
+              <td>Financeiro</td>
+              <td>Autorizado coordenador</td>
+            </tr>
+            <tr>
+              <td>67890</td>
+              <td>2024-10-25</td>
+              <td>Maria Oliveira</td>
+              <td>R$ 2,300.00</td>
+              <td>Cliente B - Projeto Y</td>
+              <td>Marketing</td>
+              <td>Pago</td>
+            </tr>
+            <tr>
+              <td>11223</td>
+              <td>2024-10-30</td>
+              <td>Carlos Pereira</td>
+              <td>R$ 3,200.00</td>
+              <td>Cliente C - Projeto Z</td>
+              <td>Operações</td>
+              <td>Autorizado Gerência</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <div class="row mb-3">
-        <div class="col-md-4">
-          <label for="status" class="form-label">Status</label>
-          <select id="status" class="form-control" [(ngModel)]="status" name="status">
-            <option value="">Selecione</option>
-            <option *ngFor="let stat of statusOptions" [value]="stat">{{ stat }}</option>
-          </select>
-        </div>
-
-        <div class="col-md-4">
-          <label for="colaborador" class="form-label">Colaborador</label>
-          <input type="text" id="colaborador" class="form-control" [(ngModel)]="colaborador" name="colaborador">
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-primary">Pesquisar</button>
-      </div>
-
-    </form>
-
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped">
-        <thead>
-          <tr>
-            <th>Visualizar</th>
-            <th>Imprimir</th>
-            <th>Número</th>
-            <th>Data Início</th>
-            <th>Colaborador</th>
-            <th>Valor</th>
-            <th>Cliente - Projeto</th>
-            <th>Centro de Custo</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="9" class="text-center">Nenhum resultado encontrado</td>
-          </tr>
-        </tbody>
-      </table>
-
       <div class="fixed-footer">
-        <button type="button" class="btn btn-info btn-sm">Novo</button>
+        <button type="button" class="btn btn-info btn-sm">Visualizar</button>
+        <button type="button" class="btn btn-secondary btn-sm">Imprimir</button>
       </div>
     </div>
-
   </div>
 
 </div>
