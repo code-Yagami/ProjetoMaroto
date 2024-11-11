@@ -43,6 +43,14 @@ export class AdiantamentosComponent {
 
     // teste da mensagem de alerta
     if (this.testeAlerta == 1) {
+
+      /*
+      sfddsfdsofdsf
+      sdfpdsklfpkldspfldsf
+      sgofkgokfdgkofdg
+      sdfkdsfokdsfsdf
+      */
+
       this.tipoAlerta = 'sucesso';
       this.textoMensagem = 'Salvo com sucesso!';
     } else {
@@ -53,6 +61,6 @@ export class AdiantamentosComponent {
     this.mostrarMensagem = true;
     setTimeout(() => {
       this.mostrarMensagem = false;
-    }, 3000);
+    }, 5000);
   }
 }
