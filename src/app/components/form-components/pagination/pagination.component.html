@@ -1,0 +1,18 @@
+<div class="pagination-wrapper">
+  <div class="form-group">
+    <select class="form-select" [(ngModel)]="pageSize">
+      <option [ngValue]="5">5 por página</option>
+      <option [ngValue]="10">10 por página</option>
+      <option [ngValue]="20">20 por página</option>
+    </select>
+  </div>
+
+  <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [maxSize]="4"
+    [rotate]="true"
+    [ellipses]="false"
+    [boundaryLinks]="true"
+    [collectionSize]="collectionSize"></ngb-pagination>
+</div>
