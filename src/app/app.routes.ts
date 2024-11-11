@@ -4,6 +4,7 @@ import { SenhaComponent } from './routes/administracao-acesso/senha/senha.compon
 import { LoginComponent } from './components/login/login.component';
 import { DespesaComponent } from './routes/financeiro/despesa/despesa.component';
 import { AdiantamentosComponent } from './routes/pagamentos/adiantamentos/adiantamentos.component';
+import { EmprestimosComponent } from './routes/pagamentos/emprestimos/emprestimos.component';
 
 
 export const routes: Routes = [
@@ -25,6 +26,9 @@ export const routes: Routes = [
   {
     path: 'pderp/pagamentos/adiantamentos',
     component: AdiantamentosComponent
+  },  {
+    path: 'pderp/pagamentos/emprestimos',
+    component: EmprestimosComponent
   }
 
 ];

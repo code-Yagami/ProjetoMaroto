@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="body-content">
+  <div class="content">
+
+    <h4>Emprestimos</h4>
+
+    <div class="btn">
+      <app-button-component  tipoBotao="primary" textoBotao="Novo" (click)="openModal()"></app-button-component>
+    </div>
+
+    <div class="d-flex justify-content-center my-5">
+      <p>Não existem adiantamentos solicitados para este usuário.</p>
+    </div>
+
+
+    <app-modal-form [isVisible]="isModalVisible" [title]="'Novo Emprestimo'" [closeButtonText]="'Cancelar'"
+      [confirmButtonText]="'Salvar'" (confirm)="onModalConfirm()" (closeEvent)="closeModal()">
+      <div modal-body>
+
+        <div class="mb-3">
+          <label class="form-label">Tipo de pagamento</label>
+          <app-input-component typeInput="number" idInput="valor" nameInput="valor"></app-input-component>
+        </div>
+
+        <div class="row mb-3 dropdown-content">
+          <div class="col-md-4">
+            <label for="status" class="form-label">Status</label>
+            <select id="status" class="form-control" [(ngModel)]="status" name="status">
+              <option value="">Selecione</option>
+              <option *ngFor="let stat of statusOptions" [value]="stat">{{ stat }}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Motivo:</label>
+          <app-textarea-component idInput="motivo" nameInput="motivo"></app-textarea-component>
+        </div>
+
+      </div>
+    </app-modal-form>
+  </div>
+
+</div>
