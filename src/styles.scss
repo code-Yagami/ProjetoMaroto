@@ -1,5 +1,5 @@
 .body-content{
-  background: linear-gradient(to top left, #0c1015, #243650); // define o gradiente de baixo para cima
+  background: linear-gradient(to top left, #0c1015, #243650);
   min-height: 100vh;
   margin: 0;
   color: white;
@@ -11,4 +11,14 @@
 
 .content {
   margin-left: 250px;
+  margin-right: 15px;
+}
+
+.form-container {
+  background-color: #ffffff0d;
+  border-radius: 20px 20px;
+  box-shadow: 0 4px 8px #0000001a;
+  backdrop-filter: blur(10px);
+  padding-bottom: 100px;
+
 }
