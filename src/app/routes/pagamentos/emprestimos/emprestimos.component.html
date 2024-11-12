@@ -4,31 +4,27 @@
 
     <h4>Emprestimos</h4>
 
+<div class="form-container">
     <div class="btn">
       <app-button-component  tipoBotao="primary" textoBotao="Novo" (click)="openModal()"></app-button-component>
     </div>
-
-    <div class="d-flex justify-content-center my-5">
-      <p>Não existem empréstimos solicitados para este usuário.</p>
-    </div>
-
 
     <app-modal-form [isVisible]="isModalVisible" [title]="'Novo Emprestimo'" [closeButtonText]="'Cancelar'"
       [confirmButtonText]="'Salvar'" (confirm)="onModalConfirm()" (closeEvent)="closeModal()">
       <div modal-body>
 
-        <div class="row mb-3 dropdown-content">
-          <div class="col-md-4">
+        <div class="row mb-3">
+          <div class="col-md-6">
             <label for="tipoDePagamento" class="form-label">Tipo de pagamento</label>
             <select id="tipoDePagamento" class="form-control" [(ngModel)]="tipoDePagamento" name="tipoDePagamento">
               <option value="">Selecione</option>
-              <option *ngFor="let tipoDePagamento of PagamentosOptions" [value]="tipoDePagamento">{{ tipoDePagamento }}</option>
+              <option *ngFor="let tipoDePagamento of PagamentosOptions" [value]="tipoDePagamento">
+                {{ tipoDePagamento }}
+              </option>
             </select>
           </div>
-        </div>
 
-        <div class="row mb-3 dropdown-content">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <label for="parcela" class="form-label">Nº de parcelas</label>
             <select id="parcela" class="form-control" [(ngModel)]="parcela" name="parcela">
               <option value=null>Selecione</option>
@@ -37,19 +33,19 @@
           </div>
         </div>
 
-        <div class="row mb-3 dropdown-content">
-          <div class="col-md-4">
-            <label for="parcela" class="form-label">Motivo</label>
-            <select id="parcela" class="form-control" [(ngModel)]="motivo" name="motivo">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="motivo" class="form-label">Motivo</label>
+            <select id="motivo" class="form-control" [(ngModel)]="motivo" name="motivo">
               <option value="">Selecione</option>
               <option *ngFor="let motivo of motivoOptions" [value]="motivo">{{ motivo }}</option>
             </select>
           </div>
-        </div>
 
-        <div class="mb-3">
-          <label  class="form-label">Valor Total:</label>
-          <app-input-component typeInput="number" idInput="valor" nameInput="valor"></app-input-component>
+          <div class="col-md-6">
+            <label for="valor" class="form-label">Valor Total (R$):</label>
+            <app-input-component typeInput="number" idInput="valor" nameInput="valor"></app-input-component>
+          </div>
         </div>
 
         <div class="mb-3">
@@ -59,6 +55,68 @@
 
       </div>
     </app-modal-form>
+
+    <div class="table-responsive" style="max-width: 95%; overflow-x: auto;">
+      <label for="lista" id="lista">Lista</label>
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>Nº de parcelas</th>
+            <th>Valor total (R$)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6</td>
+            <td>2,500</td>
+            <td>Pendente de pagamento</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-responsive" style="max-width: 95%; overflow-x: auto;">
+      <label for="detalhamento" id="detalhamento">Detalhamento parcelas emprestimos</label>
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>Parcela</th>
+            <th>Valor (R$)</th>
+            <th>Mês/Ano referência</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>360,00</td>
+            <td>01/2023</td>
+            <td>Pago</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>360,00</td>
+            <td>02/2023</td>
+            <td>Pago</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>360,00</td>
+            <td>03/2023</td>
+            <td>Pago</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>360,00</td>
+            <td>04/2023</td>
+            <td>Pago</td>
+          </tr>          
+        </tbody>
+      </table>
+    </div>
+
+  </div>
   </div>
 
 </div>

@@ -1,4 +1,29 @@
 .btn{    
-    padding-left: 0px;
+    padding-left: 25px;
     padding-top: 30px;
+    margin-bottom: -15px;
+}
+
+.table-responsive {
+    position: relative;
+    top: 40px;
+    left: 25px;
+  }
+
+.table-responsive {
+    overflow-x: auto;
+    font-size: min(4vw, 16px);
+  }
+  
+.table {
+    border-radius: 15px;
+    width: 99%;
+    max-width: 99%;
+    word-wrap: break-word;
+    white-space: nowrap;
+  }
+
+.lista,
+.detalhamento{
+    font-size: 60px;
 }
