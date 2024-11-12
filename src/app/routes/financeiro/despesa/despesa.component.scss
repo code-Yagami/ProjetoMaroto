@@ -11,23 +11,36 @@
     left: 25px;
   }
 
+  .btn-warning{
+    top: 170px;
+    left: 0px;
+  }
+
   .table-responsive {
     position: relative;
     top: 40px;
     left: 25px;
-    width: 1380px;
   }
 
   .table-responsive {
     border-radius: 5px;
+    overflow-x: auto;
+    font-size: min(4vw, 16px);
   }
   
+  .table {
+    width: 99%;
+    max-width: 99%;
+    word-wrap: break-word;
+    white-space: nowrap;
+  }
+
   .fixed-footer {
     position: relative;
     top: -160px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-  }  
+  }
 
   .btn-info {
     left: 100px;

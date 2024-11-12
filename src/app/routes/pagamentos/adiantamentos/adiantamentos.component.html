@@ -4,6 +4,8 @@
 
     <h4>Adiantamentos</h4>
 
+    <app-alert *ngIf="mostrarMensagem" [textoMensagem]="textoMensagem" [tipoAlerta]="tipoAlerta"></app-alert>
+
     <div class="d-flex justify-content-center my-5">
       <p>Não existem adiantamentos solicitados para este usuário.</p>
     </div>

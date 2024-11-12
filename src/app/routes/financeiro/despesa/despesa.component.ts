@@ -29,4 +29,8 @@ export class DespesaComponent {
     'Reprovada'
   ];
 
+  open(){
+    
+  }
+
 }
