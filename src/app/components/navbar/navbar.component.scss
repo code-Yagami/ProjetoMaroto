@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 250px;
+  width: 230px;
   padding-top: 1rem;
   background-color: #161d26 !important;
   z-index: 1000;
@@ -11,7 +11,7 @@
   .nav-link {
     color: #ffffff;
     padding: 0.75rem 1rem;
-
+    font-size: 0.90rem;
     &:hover {
       background-color: #243650;
       color: #ffffff;
