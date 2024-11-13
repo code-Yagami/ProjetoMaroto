@@ -19,10 +19,12 @@ export class EmprestimosComponent {
 
   openModal() {
     this.isModalVisible = true;
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal() {
     this.isModalVisible = false;
+     document.body.style.overflow = ''
   }
 
   onModalConfirm() {
