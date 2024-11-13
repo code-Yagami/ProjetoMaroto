@@ -12,3 +12,12 @@
   word-wrap: break-word;
   white-space: nowrap;
 }
+
+.table.table-sm th,
+.table.table-sm td {
+  padding: 0.2rem;
+}
+
+.table.table-sm {
+  font-size: 0.80rem;
+}
