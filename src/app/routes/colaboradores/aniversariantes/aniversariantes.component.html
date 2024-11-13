@@ -39,14 +39,18 @@
         <br/>
         <hr>
 
+        <div class="espacoTabela">
+          <div class="mb-3">
+            <app-table-component
+            [headers]="['Aniversário', 'Nome Completo', 'E-Mail', 'Centro de Custo', 'Cidade']"
+            [chaves]="['aniversario', 'nome', 'email', 'centroDeCusto', 'cidade']"
+            [dados]="dadosTabela"
+            ></app-table-component>
+          </div>
 
-
-        <div class="mb-3">
-          <app-table-component [dados]="dadosTabela" ></app-table-component>
-        </div>
-
-        <div class="d-flex justify-content-end div-b">
-          <app-button-component tipoBotao="primary" textoBotao="Imprimir"></app-button-component>
+          <div class="d-flex justify-content-end div-button-imprimir">
+            <app-button-component tipoBotao="primary" textoBotao="Imprimir"></app-button-component>
+          </div>
         </div>
 
       </form>
