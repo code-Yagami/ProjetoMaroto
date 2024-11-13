@@ -1,0 +1,15 @@
+.table-responsive {
+  position: relative;
+  top: 40px;
+  left: 25px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: min(4vw, 16px);
+}
+
+.table {
+  width: 99%;
+  max-width: 99%;
+  word-wrap: break-word;
+  white-space: nowrap;
+}

@@ -1,1 +1,22 @@
-<p>table-component works!</p>
+<div class="table-responsive" style="max-width: 95%; overflow-x: auto;">
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Aniversário</th>
+        <th>Nome Completo</th>
+        <th>E-Mail</th>
+        <th>Centro de Custo</th>
+        <th>Cidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dados">
+        <td>{{ item.aniversario }}</td>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.centroDeCusto }}</td>
+        <td>{{ item.cidade }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
