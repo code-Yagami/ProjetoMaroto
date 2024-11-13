@@ -1,22 +1,15 @@
 <div class="table-responsive" style="max-width: 100%; overflow-x: auto;">
-  <table class="table table-hover table-bordered table-sm ">
+  <table class="table table-hover table-bordered table-sm">
     <thead>
       <tr class="table-secondary">
-        <th>Aniversário</th>
-        <th>Nome Completo</th>
-        <th>E-Mail</th>
-        <th>Centro de Custo</th>
-        <th>Cidade</th>
+        <th *ngFor="let header of headers">{{ header }}</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of dados">
-        <td>{{ item.aniversario }}</td>
-        <td>{{ item.nome }}</td>
-        <td>{{ item.email }}</td>
-        <td>{{ item.centroDeCusto }}</td>
-        <td>{{ item.cidade }}</td>
+        <td *ngFor="let chave of chaves">{{ item[chave] }}</td>
       </tr>
     </tbody>
   </table>
 </div>
+

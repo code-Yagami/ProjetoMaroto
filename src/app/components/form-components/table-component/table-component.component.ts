@@ -9,5 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './table-component.component.scss'
 })
 export class TableComponentComponent {
+  @Input() headers: string[] = [];
   @Input() dados: any[] = [];
+  @Input() chaves: string[] = [];
 }
