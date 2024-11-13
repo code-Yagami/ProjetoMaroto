@@ -1,1 +1,56 @@
-<p>aniversariantes works!</p>
+<app-header></app-header>
+<div class="body-content">
+  <div class="content">
+
+    <h4>Aniversariantes</h4>
+
+    <div class="form-container p-4">
+      <form class="p-4 mb-4">
+
+        <div class="mb-3">
+          <label class="form-label">Nome:</label>
+          <app-input-component typeInput="text"></app-input-component>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label">Cidade:</label>
+            <app-select-component [listaRender]="listaCidade" (seleciona)="selecionaCidade($event)" name="cidadeSelecionada"></app-select-component>
+          </div>
+
+          <div class="col">
+            <label class="form-label">Mês:</label>
+            <app-select-component [listaRender]="listaMes" (seleciona)="selecionaMes($event)"></app-select-component>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label">Centro Custo:</label>
+            <app-select-component [listaRender]="listaCentroCusto" (seleciona)="selecionaCentro($event)"></app-select-component>
+          </div>
+          <div class="col"></div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <app-button-component tipoBotao="primary" textoBotao="Pesquisar"></app-button-component>
+        </div>
+
+        <br/>
+        <hr>
+
+
+
+        <div class="mb-3">
+          <app-table-component [dados]="dadosTabela" ></app-table-component>
+        </div>
+
+        <div class="d-flex justify-content-end div-b">
+          <app-button-component tipoBotao="primary" textoBotao="Imprimir"></app-button-component>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
