@@ -5,6 +5,9 @@ import { LoginComponent } from './components/login/login.component';
 import { DespesaComponent } from './routes/financeiro/despesa/despesa.component';
 import { AdiantamentosComponent } from './routes/pagamentos/adiantamentos/adiantamentos.component';
 import { EmprestimosComponent } from './routes/pagamentos/emprestimos/emprestimos.component';
+import { AniversariosComponent } from './routes/relatorios/aniversarios/aniversarios.component';
+import { AniversariantesComponent } from './routes/colaboradores/aniversariantes/aniversariantes.component';
+
 
 
 export const routes: Routes = [
@@ -26,9 +29,18 @@ export const routes: Routes = [
   {
     path: 'pderp/pagamentos/adiantamentos',
     component: AdiantamentosComponent
-  },  {
+  },
+  {
     path: 'pderp/pagamentos/emprestimos',
     component: EmprestimosComponent
-  }
+  },
+  {
+    path: 'pderp/relatorios/aniversarios',
+    component: AniversariosComponent
+},
+{
+    path: 'pderp/colaboradores/aniversariantes',
+    component: AniversariantesComponent
+}
 
 ];
