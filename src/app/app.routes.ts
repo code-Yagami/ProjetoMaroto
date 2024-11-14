@@ -6,6 +6,7 @@ import { DespesaComponent } from './routes/financeiro/despesa/despesa.component'
 import { AdiantamentosComponent } from './routes/pagamentos/adiantamentos/adiantamentos.component';
 import { AniversariosComponent } from './routes/relatorios/aniversarios/aniversarios.component';
 import { AniversariantesComponent } from './routes/colaboradores/aniversariantes/aniversariantes.component';
+import { ManutencaoColaboradoresComponent } from './routes/colaboradores/manutencao-colaboradores/manutencao-colaboradores.component';
 
 
 export const routes: Routes = [
@@ -35,6 +36,10 @@ export const routes: Routes = [
   {
     path: 'pderp/colaboradores/aniversariantes',
     component: AniversariantesComponent
+  },
+  {
+    path: 'pderp/colaboradores/manutencao-colaboradores',
+    component: ManutencaoColaboradoresComponent
   }
 
 ];
