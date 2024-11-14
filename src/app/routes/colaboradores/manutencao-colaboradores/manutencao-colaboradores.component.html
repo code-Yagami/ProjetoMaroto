@@ -1,1 +1,71 @@
-<p>manutencao-colaboradores works!</p>
+<app-header></app-header>
+<div class="body-content">
+  <div class="content">
+
+    <h4>Manutenção Colaboradores</h4>
+
+    <div class="form-container p-4">
+      <form class="p-4 mb-4">
+
+        <div class="mb-4">
+          <h6>Pesquisar Colaborador:</h6>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Colaborador:</label>
+          <app-input-component typeInput="text"></app-input-component>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label">Status:</label>
+            <app-select-component [listaRender]="['Ativo', 'Inativo']" (seleciona)="selecionaStatus($event)" name="cidadeSelecionada"></app-select-component>
+          </div>
+
+          <div class="col">
+            <label class="form-label">Cidade:</label>
+            <app-select-component [listaRender]="listaCidade" (seleciona)="selecionaCidade($event)"></app-select-component>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label">Tipo Hierarquia:</label>
+            <app-select-component [listaRender]="listaHieraquias" (seleciona)="selecionaHierarquia($event)" name="cidadeSelecionada"></app-select-component>
+          </div>
+
+          <div class="col">
+            <label class="form-label">Centro de Custo:</label>
+            <app-select-component [listaRender]="listaCentroCusto" (seleciona)="selecionaCentro($event)"></app-select-component>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label">Cliente - Projeto:</label>
+            <app-select-component [listaRender]="listaProjetos" (seleciona)="selecionaProjeto($event)"></app-select-component>
+          </div>
+          <div class="col"></div>
+        </div>
+
+        <div class="div-data mb-3">
+          <label for="" class="label-data">Data Admissão - Inicio:</label>
+          <app-data-component #dataInicio (dateChange)="onDataInicio($event)" class="componente-data"></app-data-component>
+
+          <label for="" class="label-data">Fim:</label>
+          <app-data-component #dataFim (dateChange)="onDataFim($event)" class="componente-data"></app-data-component>
+        </div>
+
+
+        <div class="d-flex justify-content-end div-button-imprimir">
+          <app-button-component tipoBotao="secondary" textoBotao="Novo Colaborador"></app-button-component>
+          <app-button-component tipoBotao="primary" textoBotao="Pesquisar" (click)="onPesquisar()"></app-button-component>
+        </div>
+
+
+        <hr>
+
+      </form>
+    </div>
+  </div>
+</div>
