@@ -4,7 +4,12 @@ import { SenhaComponent } from './routes/administracao-acesso/senha/senha.compon
 import { LoginComponent } from './components/login/login.component';
 import { DespesaComponent } from './routes/financeiro/despesa/despesa.component';
 import { AdiantamentosComponent } from './routes/pagamentos/adiantamentos/adiantamentos.component';
+<<<<<<< HEAD
 import { NovoDespesaComponent } from './routes/financeiro/despesa/crud/novo-despesa/novo-despesa.component';
+=======
+import { AniversariosComponent } from './routes/relatorios/aniversarios/aniversarios.component';
+import { AniversariantesComponent } from './routes/colaboradores/aniversariantes/aniversariantes.component';
+>>>>>>> homologacao
 
 
 export const routes: Routes = [
@@ -29,6 +34,14 @@ export const routes: Routes = [
   {
     path: 'pderp/pagamentos/adiantamentos',
     component: AdiantamentosComponent
+  },
+  {
+    path: 'pderp/relatorios/aniversarios',
+    component: AniversariosComponent
+  },
+  {
+    path: 'pderp/colaboradores/aniversariantes',
+    component: AniversariantesComponent
   }
 
 ];

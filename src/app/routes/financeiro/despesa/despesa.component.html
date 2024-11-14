@@ -66,12 +66,12 @@
           </div>
         </div>
 
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end fixed-footer">
           <button type="button" class="btn btn-warning">Pesquisar</button>
         </div>
       </form>
 
-      <div class="table-responsive">
+      <div class="table-responsive" style="max-width: 95%; overflow-x: auto;">
         <table class="table table-hover table-bordered">
           <thead>
             <tr>
@@ -116,14 +116,8 @@
         </table>
       </div>
       <div class="fixed-footer">
-        <app-button-component
-          tipoBotao="primary"
-          textoBotao="Novo"
-          (click)="openNovo()"
-          class="btn btn-warning"
-          [routerLink]="['novo']"
-          routerLinkActive="router-link-active"
-        ></app-button-component>
+        <button type="button" class="btn btn-info btn-sm">Visualizar</button>
+        <button type="button" class="btn btn-primary btn-sm">Imprimir</button>
       </div>
     </div>
   </div>
