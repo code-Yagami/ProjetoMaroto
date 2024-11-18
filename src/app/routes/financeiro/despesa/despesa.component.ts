@@ -3,17 +3,13 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from '../../../components/header/header.component';
-<<<<<<< HEAD
-import { SharedModule } from '../../../shared/shared.module';
 import { RouterLink } from '@angular/router';
 import { NovoDespesaComponent } from './crud/novo-despesa/novo-despesa.component';
-=======
->>>>>>> homologacao
 
 @Component({
   selector: 'app-despesa',
   standalone: true,
-  imports: [HeaderComponent, SharedModule, FormsModule, CommonModule, RouterLink, NovoDespesaComponent],
+  imports: [  HeaderComponent, FormsModule, CommonModule, RouterLink, NovoDespesaComponent],
   templateUrl: './despesa.component.html',
   styleUrl: './despesa.component.scss'
 })
@@ -36,13 +32,7 @@ export class DespesaComponent {
   ];
   router: any;
 
-<<<<<<< HEAD
   openNovo() {
     this.router.navigate(['/pderp/financeiro/despesas/novo']);  }
-=======
-  open(){
-
-  }
->>>>>>> homologacao
 
 }

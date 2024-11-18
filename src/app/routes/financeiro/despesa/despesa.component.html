@@ -116,8 +116,15 @@
         </table>
       </div>
       <div class="fixed-footer">
-        <button type="button" class="btn btn-info btn-sm">Visualizar</button>
-        <button type="button" class="btn btn-primary btn-sm">Imprimir</button>
+        <app-button-component
+        tipoBotao="primary"
+        textoBotao="Novo"
+        (click)="openNovo()"
+        class="btn btn-warning"
+        [routerLink]="['novo']"
+        routerLinkActive="router-link-active"
+      ></app-button-component>
+
       </div>
     </div>
   </div>

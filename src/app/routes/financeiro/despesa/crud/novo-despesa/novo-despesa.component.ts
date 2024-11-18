@@ -3,10 +3,14 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
-import { ButtonComponentComponent } from '../../../../../components/form-components/button-component/button-component.component';
-import { InputComponentComponent } from '../../../../../components/form-components/input-component/input-component.component';
+import {
+  ButtonComponentComponent,
+} from '../../../../../components/form-components/button-component/button-component.component';
+import {
+  InputComponentComponent,
+} from '../../../../../components/form-components/input-component/input-component.component';
+import { ModalFormComponent } from '../../../../../components/form-components/modal-form/modal-form.component';
 import { HeaderComponent } from '../../../../../components/header/header.component';
-import { ModalFormComponent } from "../../../../../components/form-components/modal-form/modal-form.component";
 
 @Component({
   selector: 'app-novo-despesa',
@@ -60,4 +64,14 @@ export class NovoDespesaComponent {
     'Tributárias',
     'Viagens'
   ]
+
+  isModalVisible = false;
+
+  openModal() {
+    this.isModalVisible = true;
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
+  }
 }
