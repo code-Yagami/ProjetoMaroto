@@ -1,17 +1,18 @@
 .table-responsive {
   position: relative;
-  top: 40px;
-  border-radius: 5px;
-  overflow-x: auto;
   font-size: min(4vw, 16px);
 }
 
 .table {
+  border-radius: 5px;
   width: 99%;
   max-width: 99%;
   word-wrap: break-word;
   white-space: nowrap;
+  overflow: hidden;
+  font-size: min(4vw, 16px);
 }
+
 
 .table.table-sm th,
 .table.table-sm td {
