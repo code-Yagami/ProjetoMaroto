@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 60px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  z-index: 1;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #eaeef1;
+}
