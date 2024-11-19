@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './select-component.component.scss'
 })
 export class SelectComponentComponent {
-  @Input() listaRender!: string[] | null;
-  @Output() seleciona = new EventEmitter<string>();
+  @Input() listaRender!: any[] | null;
+  @Output() seleciona = new EventEmitter<any>();
 
   onSelecionado(event: Event) {
     const valorSelecionado = (event.target as HTMLSelectElement).value;

@@ -6,11 +6,13 @@ import { ModalFormComponent } from '../../../components/form-components/modal-fo
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { InputComponentComponent } from '../../../components/form-components/input-component/input-component.component';
+import { SelectComponentComponent } from '../../../components/form-components/select-component/select-component.component';
+import { TableComponentComponent } from '../../../components/form-components/table-component/table-component.component';
 
 @Component({
   selector: 'app-emprestimos',
   standalone: true,
-  imports: [HeaderComponent,ButtonComponentComponent,TextareaComponentComponent,ModalFormComponent,CommonModule,FormsModule,InputComponentComponent],
+  imports: [HeaderComponent,ButtonComponentComponent,TextareaComponentComponent,ModalFormComponent,CommonModule,FormsModule,InputComponentComponent, SelectComponentComponent, TableComponentComponent],
   templateUrl: './emprestimos.component.html',
   styleUrl: './emprestimos.component.scss'
 })
@@ -32,6 +34,7 @@ export class EmprestimosComponent {
     console.log('Modal confirmado!');
   }
 
+  
   tipoDePagamento: string | null = '';
   parcela: number | null = null;
   motivo: string | null = '';
@@ -47,5 +50,34 @@ export class EmprestimosComponent {
     'Notebook',
     'Outros',
   ];
+
+  dadosTabelaEmprestimo = [
+    { nParcelas: 6, valorTotal: '2.500', status: 'Pendente de pagamento'}
+  ];
+
+  dadosTabelaDetalhamento = [
+    { parcela: 1, valor: '416.00', mesAnoRef: '01/2023', status: 'Pago' },
+    { parcela: 2, valor: '416.00', mesAnoRef: '02/2023', status: 'Pago' },
+    { parcela: 3, valor: '416.00', mesAnoRef: '03/2023', status: 'Pago' },
+    { parcela: 4, valor: '416.00', mesAnoRef: '04/2023', status: 'Pago' },
+    { parcela: 5, valor: '416.00', mesAnoRef: '05/2023', status: 'Pago' },
+    { parcela: 6, valor: '416.00', mesAnoRef: '06/2023', status: 'Pendente de pagamento' }
+  ];
+  
+
+  selecionaTipoDePagamento(valor: string) {
+    this.tipoDePagamento = valor;
+    console.log("Valor atualizado no componente pai:", this.tipoDePagamento);
+  }
+
+  selecionaParcela(valor: number): void {
+    this.parcela = valor;
+    console.log("Valor atualizado no componente pai:", this.parcela);
+  }
+
+  selecionaMotivo(valor: string) {
+    this.motivo = valor;
+    console.log("Valor atualizado no componente pai:", this.motivo);
+  }
 
 }

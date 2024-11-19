@@ -15,31 +15,23 @@
 
           <div class="row mb-3">
             <div class="col-md-6">
-              <label for="tipoDePagamento" class="form-label">Tipo de pagamento</label>
-              <select id="tipoDePagamento" class="form-control" [(ngModel)]="tipoDePagamento" name="tipoDePagamento">
-                <option value="">Selecione</option>
-                <option *ngFor="let tipoDePagamento of PagamentosOptions" [value]="tipoDePagamento">
-                  {{ tipoDePagamento }}
-                </option>
-              </select>
+              <label class="form-label">Tipo de pagamento:</label>
+              <app-select-component [listaRender]="PagamentosOptions" (seleciona)="selecionaTipoDePagamento($event)"
+                name="tipoDePagamento"></app-select-component>
             </div>
 
             <div class="col-md-6">
-              <label for="parcela" class="form-label">Nº de parcelas</label>
-              <select id="parcela" class="form-control" [(ngModel)]="parcela" name="parcela">
-                <option value=null>Selecione</option>
-                <option *ngFor="let option of parcelaOptions" [value]="option">{{ option }}</option>
-              </select>
+              <label class="form-label">Nº de Parcelas:</label>
+              <app-select-component [listaRender]="parcelaOptions" (seleciona)=" selecionaParcela($event)"
+                name="parcela"></app-select-component>
             </div>
           </div>
 
           <div class="row mb-3">
             <div class="col-md-6">
-              <label for="motivo" class="form-label">Motivo</label>
-              <select id="motivo" class="form-control" [(ngModel)]="motivo" name="motivo">
-                <option value="">Selecione</option>
-                <option *ngFor="let motivo of motivoOptions" [value]="motivo">{{ motivo }}</option>
-              </select>
+              <label class="form-label">Motivo:</label>
+              <app-select-component [listaRender]="motivoOptions" (seleciona)=" selecionaParcela($event)"
+                name="motivo"></app-select-component>
             </div>
 
             <div class="col-md-6">
@@ -56,67 +48,27 @@
         </div>
       </app-modal-form>
 
-      <div class="table-responsive" style="max-width: 95%; overflow-x: auto;">
-        <label for="lista" id="lista">Lista</label>
-        <table class="table table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Nº de parcelas</th>
-              <th>Valor total (R$)</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>6</td>
-              <td>2,500</td>
-              <td>Pendente de pagamento</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="tabela">
+        <div class="mb-3">
+          <label class="form-label">Lista:</label>
+          <app-table-component [headers]="['Nº de parcelas', 'Valor total R$', 'Status']"
+            [chaves]="['nParcelas', 'valorTotal', 'status']" [dados]="dadosTabelaEmprestimo"></app-table-component>
+        </div>
       </div>
 
-      <div class="table-responsive" style="max-width: 95%; overflow-x: auto;">
-        <label for="detalhamento" id="detalhamento">Detalhamento parcelas emprestimos</label>
-        <table class="table table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Parcela</th>
-              <th>Valor (R$)</th>
-              <th>Mês/Ano referência</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>360,00</td>
-              <td>01/2023</td>
-              <td>Pago</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>360,00</td>
-              <td>02/2023</td>
-              <td>Pago</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>360,00</td>
-              <td>03/2023</td>
-              <td>Pago</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>360,00</td>
-              <td>04/2023</td>
-              <td>Pago</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="fixed-footer">
+        <app-button-component tipoBotao="info" textoBotao="Visualizar" class="me-2"></app-button-component>
+        <app-button-component tipoBotao="primary" textoBotao="Imprimir"></app-button-component>
       </div>
 
+      <div class="tabela">
+        <div class="mb-3">
+          <label class="form-label">Detalhamento parcelas emprestimos:</label>
+          <app-table-component [headers]="['Parcela', 'Valor R$', 'Mês/Ano referência','Status']"
+            [chaves]="['parcela', 'valor', 'mesAnoRef','status']"
+            [dados]="dadosTabelaDetalhamento"></app-table-component>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>
