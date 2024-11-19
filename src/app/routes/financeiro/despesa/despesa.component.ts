@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../../components/header/header.component';
 import { ButtonComponentComponent } from '../../../components/form-components/button-component/button-component.component';
 import { InputComponentComponent } from '../../../components/form-components/input-component/input-component.component';
@@ -8,11 +8,12 @@ import { DataComponentComponent } from '../../../components/form-components/data
 import { NumberComponentComponent } from '../../../components/form-components/number-component/number-component.component';
 import { SelectComponentComponent } from '../../../components/form-components/select-component/select-component.component';
 import { TableComponentComponent } from '../../../components/form-components/table-component/table-component.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-despesa',
   standalone: true,
-  imports: [HeaderComponent, FormsModule, CommonModule, ButtonComponentComponent,InputComponentComponent,DataComponentComponent,NumberComponentComponent, SelectComponentComponent,TableComponentComponent],
+  imports: [HeaderComponent, FormsModule, CommonModule, ButtonComponentComponent,InputComponentComponent,DataComponentComponent,NumberComponentComponent, SelectComponentComponent,TableComponentComponent, RouterLink],
   templateUrl: './despesa.component.html',
   styleUrl: './despesa.component.scss'
 })
@@ -34,8 +35,9 @@ export class DespesaComponent {
     'Pago',
     'Reprovada'
   ];
+  router: any;
 
-  dadosTabela = [
+    dadosTabela = [
     { numero: 12345, datainicial: '2024-11-01', colaborador: 'João Silva', clienteProjeto: 'Cliente A - Projeto X', centroCusto: 'Financeiro', status: 'Autorizado coordenador' },
     { numero: 67890, datainicial: '2024-10-15', colaborador: 'Maria Souza', clienteProjeto: 'Cliente B - Projeto Y', centroCusto: 'Marketing', status: 'Aprovado para pagamento' },
     { numero: 11223, datainicial: '2024-09-20', colaborador: 'Carlos Pereira', clienteProjeto: 'Cliente C - Projeto Z', centroCusto: 'TI', status: 'Pago' },

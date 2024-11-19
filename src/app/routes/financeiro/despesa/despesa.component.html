@@ -1,10 +1,7 @@
 <app-header></app-header>
 <div class="body-content">
-
   <div class="content">
-
     <h4>Despesas</h4>
-
     <div class="form-container">
       <form class="p-4 mb-4">
         <div class="row mb-3">
@@ -25,6 +22,7 @@
             <app-number-component
             [placeholder]="''"
           ></app-number-component>
+
           </div>
         </div>
 
@@ -58,9 +56,11 @@
 
       <div class="fixed-footer">
         <app-button-component tipoBotao="info" textoBotao="Visualizar" class="me-2"></app-button-component>
-        <app-button-component tipoBotao="primary" textoBotao="Imprimir"></app-button-component>
-      </div>
-    </div>
-  </div>
-
-</div>
+        <app-button-component tipoBotao="primary" textoBotao="Imprimir" class="me-2"></app-button-component>
+        <app-button-component
+        tipoBotao="primary"
+        textoBotao="Novo"
+        (click)="openNovo()"
+        [routerLink]="['novo']"
+        routerLinkActive="router-link-active"
+      ></app-button-component>
