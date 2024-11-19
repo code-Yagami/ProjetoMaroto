@@ -8,8 +8,7 @@ import { EmprestimosComponent } from './routes/pagamentos/emprestimos/emprestimo
 import { AniversariosComponent } from './routes/relatorios/aniversarios/aniversarios.component';
 import { AniversariantesComponent } from './routes/colaboradores/aniversariantes/aniversariantes.component';
 import { NovoDespesaComponent } from './routes/financeiro/despesa/crud/novo-despesa/novo-despesa.component';
-
-
+import { ManutencaoColaboradoresComponent } from './routes/colaboradores/manutencao-colaboradores/manutencao-colaboradores.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'pderp/login', pathMatch: 'full' },
@@ -45,6 +44,10 @@ export const routes: Routes = [
   {
     path: 'pderp/colaboradores/aniversariantes',
     component: AniversariantesComponent
+  },
+  {
+    path: 'pderp/colaboradores/manutencao-colaboradores',
+    component: ManutencaoColaboradoresComponent
   }
 
 ];
