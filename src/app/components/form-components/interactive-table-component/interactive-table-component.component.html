@@ -1,1 +1,28 @@
-<p>interactive-table-component works!</p>
+<div class="table-responsive" style="max-width: 100%; overflow-x: auto;">
+  <table class="table table table-bordered table-sm">
+    <thead>
+      <tr class="table-secondary">
+        <th *ngFor="let header of headers">{{ header }}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dados">
+        <td *ngFor="let chave of chaves">{{ item[chave] }}</td>
+        <td>
+          <button
+            class="btn btn-sm btn-secondary me-2"
+            (click)="visualizar.emit(item)">
+            Visualizar
+          </button>
+          <button
+            class="btn btn-sm btn-warning"
+            (click)="editar.emit(item)">
+            Editar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
