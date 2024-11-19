@@ -22,6 +22,7 @@ export class ManutencaoColaboradoresComponent {
   projetoSelecionado: string = "";
   dataInicioSelecionada: string = '';
   dataFimSelecionada: string = "";
+  selectedDate: string | null = null;
 
   //  ## TRABALHANDO COM DATA ##
   @ViewChild('dataInicio') dataInicio!: DataComponentComponent;
@@ -53,8 +54,8 @@ export class ManutencaoColaboradoresComponent {
   // ## METODO QUE PESQUISA ##
   onPesquisar() {
     // Acessando o método getDate do componente filho para obter o valor da data
-    this.dataInicio.getDate(); // Enviar valor para o componente pai
-    this.dataFim.getDate(); // Enviar valor para o componente pai
+    //this.dataInicio.getDate(); // Enviar valor para o componente pai
+   // this.dataFim.getDate(); // Enviar valor para o componente pai
 
     console.log(this.dataInicioSelecionada)
     console.log(this.dataFimSelecionada)
@@ -111,5 +112,10 @@ export class ManutencaoColaboradoresComponent {
   onEditar(item: any): void {
     console.log('Editar:', item);
     // Adicione a lógica de edição aqui
+  }
+
+  handleDateChange(newDate: string) {
+    console.log('Selected date:', newDate);
+    this.selectedDate = newDate;
   }
 }
