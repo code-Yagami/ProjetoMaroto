@@ -4,12 +4,13 @@ import { InputComponentComponent } from "../../../components/form-components/inp
 import { SelectComponentComponent } from "../../../components/form-components/select-component/select-component.component";
 import { FormsModule } from '@angular/forms';
 import { DataComponentComponent } from "../../../components/form-components/data-component/data-component.component";
-import { ButtonComponentComponent } from "../../../components/form-components/button-component/button-component.component"; // Importar FormsModule
+import { ButtonComponentComponent } from "../../../components/form-components/button-component/button-component.component";
+import { InteractiveTableComponentComponent } from "../../../components/form-components/interactive-table-component/interactive-table-component.component";
 
 @Component({
   selector: 'app-manutencao-colaboradores',
   standalone: true,
-  imports: [HeaderComponent, InputComponentComponent, SelectComponentComponent, FormsModule, DataComponentComponent, ButtonComponentComponent],
+  imports: [HeaderComponent, InputComponentComponent, SelectComponentComponent, FormsModule, DataComponentComponent, ButtonComponentComponent, InteractiveTableComponentComponent],
   templateUrl: './manutencao-colaboradores.component.html',
   styleUrl: './manutencao-colaboradores.component.scss'
 })
@@ -23,11 +24,10 @@ export class ManutencaoColaboradoresComponent {
   dataFimSelecionada: string = "";
 
   //  ## TRABALHANDO COM DATA ##
-  // Usando ViewChild para acessar os dois componentes de data
   @ViewChild('dataInicio') dataInicio!: DataComponentComponent;
   @ViewChild('dataFim') dataFim!: DataComponentComponent;
 
-  // Função para capturar o valor da data emitido pelo componente filho
+
   onDataInicio(date: string) {
     this.dataInicioSelecionada = date;
   }
@@ -94,4 +94,22 @@ export class ManutencaoColaboradoresComponent {
     'Fabrica de Software',
     'Auditoria Eletronica'
   ]
+
+
+
+  // ## TRABALHANDO COM A TABELA ##
+  dadosTabela = [
+    { aniversario: '01/01', nome: 'João Silva', email: 'joao@email.com', centroDeCusto: 'Financeiro', cidade: 'São Paulo' },
+    { aniversario: '02/02', nome: 'Maria Oliveira', email: 'maria@email.com', centroDeCusto: 'RH', cidade: 'Rio de Janeiro' },
+  ];
+
+  onVisualizar(item: any): void {
+    console.log('Visualizar:', item);
+    // Adicione a lógica de visualização aqui
+  }
+
+  onEditar(item: any): void {
+    console.log('Editar:', item);
+    // Adicione a lógica de edição aqui
+  }
 }

@@ -65,6 +65,16 @@
 
         <hr>
 
+        <div class="div-data mb-3">
+          <app-interactive-table-component
+          [headers]="['Aniversário', 'Nome Completo', 'E-Mail', 'Centro de Custo', 'Cidade']"
+          [chaves]="['aniversario', 'nome', 'email', 'centroDeCusto', 'cidade']"
+          [dados]="dadosTabela"
+          (visualizar)="onVisualizar($event)"
+          (editar)="onEditar($event)"
+          ></app-interactive-table-component>
+        </div>
+
       </form>
     </div>
   </div>
