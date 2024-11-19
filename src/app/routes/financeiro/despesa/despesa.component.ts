@@ -37,6 +37,9 @@ export class DespesaComponent {
   ];
   router: any;
 
+  openNovo() {
+    this.router.navigate(['/pderp/financeiro/despesas/novo']);  }
+
     dadosTabela = [
     { numero: 12345, datainicial: '2024-11-01', colaborador: 'João Silva', clienteProjeto: 'Cliente A - Projeto X', centroCusto: 'Financeiro', status: 'Autorizado coordenador' },
     { numero: 67890, datainicial: '2024-10-15', colaborador: 'Maria Souza', clienteProjeto: 'Cliente B - Projeto Y', centroCusto: 'Marketing', status: 'Aprovado para pagamento' },
