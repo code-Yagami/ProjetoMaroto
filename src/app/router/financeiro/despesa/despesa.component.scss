@@ -1,0 +1,50 @@
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button1 {
+  padding: 10px 20px; /* Um pouco mais de espaçamento para o botão */
+  background-color: transparent; /* Fundo transparente para efeito de borda */
+  color: #0a6ddefb; /* Cor do texto com base na cor fornecida */
+  border: 2px solid #0e66ccfb; /* Cor da borda */
+  border-radius: px; /* Bordas arredondadas */
+  font-size: 1rem; /* Tamanho de fonte confortável */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transição suave no hover */
+
+  &:hover {
+    background-color: #2e4055fb; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    border-color: #2e4055fb; /* Mantém a cor da borda ao passar o mouse */
+  }
+
+  &:focus {
+    outline: none; /* Remove o contorno ao focar */
+    box-shadow: 0 0 0 3px rgba(46, 64, 85, 0.4); /* Efeito sutil de foco */
+  }
+  button:hover {
+    background-color: #4554a0;
+  }
+}
+
+.main-content {
+  margin-left: 250px;
+  margin-top: 60px;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}

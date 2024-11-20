@@ -4,16 +4,15 @@
   left: 0;
   width: 100%;
   z-index: 1030;
-  background-color: #ffffff; /* Cor de fundo da navbar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 0.8rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  /* Hamburger */
   .hamburger {
-    display: none; /* Exibir apenas em telas pequenas */
+    display: none;
     cursor: pointer;
     position: relative;
     width: 2.5rem;
@@ -31,34 +30,32 @@
       transition: all 0.3s ease-in-out;
     }
 
-    /* Efeito de ativação */
     &.is-active {
       .line {
-        background-color: var(--bs-light); /* Cor do hamburger quando ativo */
+        background-color: var(--bs-light);
       }
 
       .line:nth-child(1) {
-        transform: translateY(8px) rotate(45deg); /* Primeira linha */
+        transform: translateY(8px) rotate(45deg);
       }
 
       .line:nth-child(2) {
-        opacity: 0; /* Ocultar a linha do meio */
+        opacity: 0;
       }
 
       .line:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg); /* Terceira linha */
+        transform: translateY(-8px) rotate(-45deg);
       }
     }
   }
 
-  /* Ícones */
   .bell-icon {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    animation: tada 1s infinite; /* Animação */
+    animation: tada 1s infinite;
   }
 
   .pulse-css {
@@ -86,15 +83,13 @@
     }
   }
 
-  /* Media Query para telas pequenas */
   @media (max-width: 767px) {
     .hamburger {
-      display: flex; /* Exibir o hamburger menu em telas pequenas */
+      display: flex;
     }
   }
 }
 
-/* Animações */
 @keyframes pulse {
   0% {
     transform: scale(0.3);
