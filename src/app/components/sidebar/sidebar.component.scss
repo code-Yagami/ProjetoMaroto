@@ -1,9 +1,9 @@
 /* Estilo geral da sidebar */
 .sidebar {
-  width: 250px;
+  width: 290px;
   height: 100%;
   position: fixed;
-  top: 42px;
+  top: 40px;
   left: 0;
   background-color: #2e4055fb;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
@@ -99,4 +99,16 @@
 .sidebar .submenu .dropdown {
   list-style-type: none;
   padding-left: 0;
+}
+.menu-icon {
+  width: 35px; /* Tamanho do ícone */
+  height: 35px; /* Tamanho do ícone */
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+  transition: transform 0.3s ease; /* Transição suave para o efeito hover */
+
+}
+
+.sidebar .nav-item .nav-link:hover .menu-icon {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone quando o item for hover */
 }
