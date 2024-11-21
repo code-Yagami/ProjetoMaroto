@@ -21,13 +21,12 @@ input {
   background-color: transparent; /* Fundo transparente para efeito de borda */
   color: #0a6ddefb; /* Cor do texto com base na cor fornecida */
   border: 2px solid #0e66ccfb; /* Cor da borda */
-  border-radius: px; /* Bordas arredondadas */
+  border-radius: 15px; /* Bordas arredondadas */
   font-size: 1rem; /* Tamanho de fonte confortável */
   cursor: pointer;
   transition: all 0.3s ease; /* Transição suave no hover */
-
   &:hover {
-    background-color: #2e4055fb; /* Cor de fundo ao passar o mouse */
+    background-color: #1b64b8fb; /* Cor de fundo ao passar o mouse */
     color: white; /* Cor do texto ao passar o mouse */
     border-color: #2e4055fb; /* Mantém a cor da borda ao passar o mouse */
   }
@@ -48,3 +47,5 @@ input {
   position: relative;
   z-index: 10;
 }
+
+
