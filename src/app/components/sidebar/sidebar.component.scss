@@ -1,16 +1,17 @@
-/* Estilo geral da sidebar */
 .sidebar {
   width: 290px;
   height: 100%;
   position: fixed;
   top: 40px;
   left: 0;
-  background-color: #2e4055fb;
+  background-image: url('/assets/img-menu/sidebar.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: all 0.3s ease;
 }
-
 
 .sidebar .nav-item {
   position: relative;

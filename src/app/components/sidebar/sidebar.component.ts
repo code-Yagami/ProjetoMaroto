@@ -15,4 +15,6 @@ export class SidebarComponent {
     const submenu = document.getElementsByClassName('submenu')[index] as HTMLElement;
     submenu.classList.toggle('open');
   }
+
+  
 }
