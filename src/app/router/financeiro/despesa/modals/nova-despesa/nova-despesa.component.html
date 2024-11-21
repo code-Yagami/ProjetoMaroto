@@ -1,0 +1,141 @@
+
+
+<app-layout></app-layout>
+<div class="body-content body">
+  <app-card [title]="'Despesa'" [subtitle]="''">
+    <div class="content">
+
+    <div class="row mb-3 ms-3 me-3 col-md-3">
+      <label for="colaborador" class="form-label">Colaborador</label>
+      <app-input-component></app-input-component>
+    </div>
+
+    <div class="row mb-3 ms-3 me-3">
+      <div class="col-md-3">
+        <label for="dataInicio" class="form-label">Data Início</label>
+        <input
+          type="date"
+          id="dataInicio"
+          class="form-control"
+          [(ngModel)]="dataInicio"
+          name="dataInicio"
+        />
+      </div>
+      <div class="col-md-3">
+        <label for="dataFinal" class="form-label">Data Final</label>
+        <input
+          type="date"
+          id="dataFinal"
+          class="form-control"
+          [(ngModel)]="dataFinal"
+          name="dataFinal"
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3 ms-3 me-3">
+      <div class="col-md-6">
+        <label for="exampleFormControlTextarea1">Motivo</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row mb-3 d-flex justify-content-start">
+      <app-button-component
+        tipoBotao="primary"
+        textoBotao="Adicionar despesa"
+        (click)="openModal()"
+      ></app-button-component>
+    </div>
+
+
+    <app-modal-form
+      [isVisible]="isModalVisible"
+      [title]="'Nova despesa'"
+      [closeButtonText]="'Cancelar'"
+      [confirmButtonText]="'Salvar'"
+      (closeEvent)="closeModal()"
+    >
+      <div modal-body>
+        <div class="row mb-3 ms-3 me-3">
+          <div class="col-md-6">
+            <label for="categoria" class="form-label">Categoria</label>
+            <select
+              id="categoria"
+              class="form-control"
+              [(ngModel)]="status"
+              name="status"
+            >
+              <option value="">Selecione</option>
+              <option *ngFor="let stat of categoriaOptions" [value]="stat">
+                {{ stat }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="evento" class="form-label">Evento</label>
+            <select
+              id="evento"
+              class="form-control"
+              [(ngModel)]="status"
+              name="evento"
+            >
+              <option value="">Selecione</option>
+              <option ></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3 ms-3 me-3">
+          <div class="col-md-6">
+            <label for="dataInicio" class="form-label">Data Início</label>
+            <input
+              type="date"
+              id="dataInicio"
+              class="form-control"
+              [(ngModel)]="dataInicio"
+              name="dataInicio"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3 ms-3 me-3">
+          <div class="col-md-6">
+            <label for="valor" class="form-label">Valor</label>
+            <app-input-component></app-input-component>
+          </div>
+          <div class="col-md-6">
+            <label for="valorGlossado" class="form-label">Valor Glossado</label>
+            <app-input-component></app-input-component>
+          </div>
+        </div>
+
+        <div class="row mb-3 ms-3 me-3">
+          <div class="col-md-12">
+            <label for="exampleFormControlTextarea1">Descrição</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+        -
+
+        <div class="row mb-3 ms-3 me-3">
+          <div class="col-md-6">
+            <label for="valorGlossado" class="form-label"
+              >Valor Reembolsável
+            </label>
+            <app-input-component></app-input-component>
+          </div>
+        </div>
+      </div>
+    </app-modal-form>
+  </div>
+</app-card>
+</div>

@@ -1,0 +1,26 @@
+/* Aumenta a margem do modal */
+.modal-custom {
+  margin: 30px auto; /* Ajuste o valor conforme necessário */
+  padding: 20px;     /* Para adicionar preenchimento ao redor do conteúdo */
+}
+
+/* Aumenta as margens internas dos campos */
+.modal-custom .card-body {
+  padding: 20px; /* Ajuste as margens internas do conteúdo */
+}
+
+/* Aumenta as margens externas dos itens do formulário */
+.modal-custom .row {
+  margin-bottom: 15px; /* Ajuste a margem entre as linhas */
+}
+
+.modal-custom .col-md-6 {
+  margin-bottom: 20px; /* Aumenta a margem nas colunas */
+}
+
+.modal-custom .col-md-3 {
+  margin-bottom: 20px;
+}
+.right{
+  right: 50px;
+}
