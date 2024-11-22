@@ -121,3 +121,62 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+
+/* Container da navbar */
+.me-3, .me-5 {
+  position: relative;
+}
+
+/* Estilo para o link */
+.me-3 a, .me-5 a {
+  display: block;
+  position: relative;
+  text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilo para as imagens */
+.me-3 img, .me-5 img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animações para interação */
+  border-radius: 50%; /* Torna as bordas da imagem arredondadas */
+}
+
+/* Estilo para o badge (número de mensagens ou alertas) */
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff5733; /* Cor do badge (alerta ou mensagem) */
+  color: white;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+/* Interação quando o usuário passar o mouse */
+.me-3:hover img, .me-5:hover img {
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+  filter: brightness(1.5) saturate(1.5); /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Cores diferentes para os ícones */
+.me-3:hover img {
+  filter: brightness(1.5) saturate(1.5) hue-rotate(180deg); /* Ajusta a cor para o primeiro ícone */
+}
+.me-5:hover img {
+  filter: brightness(1.5) saturate(1.5) hue-rotate(90deg); /* Ajusta a cor para o segundo ícone */
+}
+
+/* Alterar a cor do badge dependendo do tipo (alerta ou mensagem) */
+#alert-count {
+  background-color: #ff5733; /* Cor para o alerta */
+}
+
+#message-count {
+  background-color: #33c1ff; /* Cor para a mensagem */
+}
