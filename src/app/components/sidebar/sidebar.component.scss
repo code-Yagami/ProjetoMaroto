@@ -1,9 +1,11 @@
 .sidebar {
-  width: 290px;
+  width: 280px;
+  height: 100vh; /* Garante que a altura seja baseada na altura da janela */
   height: 100%;
   position: fixed;
   top: 40px;
   left: 0;
+  overflow-y: auto; /* Permite rolagem vertical se o conteúdo ultrapassar a altura */
   background-image: url('/assets/img-menu/sidebar.png');
   background-size: cover;
   background-position: center;
@@ -13,103 +15,153 @@
   transition: all 0.3s ease;
 }
 
-.sidebar .nav-item {
-  position: relative;
-  margin-bottom: 10px;
+//navlink
+.sidebar .submenu .dropdown .nav-link {
+  padding-top: 2px; /* Espaçamento superior reduzido */
+  padding-bottom: 2px; /* Espaçamento inferior reduzido */
+  font-size: 0.9rem; /* Fonte ligeiramente menor para o submenu */
 }
-
 .sidebar .nav-link {
-  display: block;
-  padding: 12px 20px;
-  color: white;
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2px 10px; /* Espaçamento interno do link */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para mudanças de cor */
 }
-
 .sidebar .nav-link:hover {
-  background-color: #878f97a9;
-  color: white;
+  background-color: #7b96b1a9; /* Cor de fundo ao passar o mouse */
+  color: white; /* Mantém a cor branca do texto */
 }
+.nav-item {
+  .nav-link {
+    display: flex; // Exibe os itens em uma linha.
+    position: relative; // Define o contexto de posicionamento para os ícones.
+    align-items: center; // Alinha os itens verticalmente.
+    padding: 0.8rem 1.25rem; // Adiciona espaçamento interno nos lados.
+    color: rgba(255, 255, 255, 0.979); // Define uma cor branca com opacidade.
+    font-size: 1.0rem; // Define o tamanho da fonte.
+    font-weight: 500; // Define o peso da fonte.
+    transition: all 0.5s; // Suaviza as transições.
 
-/* Submenu */
+    i {
+      font-size: 1.6rem; // Define o tamanho do ícone.
+      margin-right: 1.25rem; // Adiciona espaçamento à direita do ícone.
+    }
 
-.sidebar .submenu .dropdown {
-  display: none;
-  padding-left: 20px;
-  list-style-type: none;
-  margin-top: 5px;
-}
+    &:hover {
+      color: var(--bs-light); // Altera a cor ao passar o mouse.
+    }
 
+    &.active-item {
+      color: var(--bs-light); // Define a cor para itens ativos.
+      background-color: #ffffff1f; // Define um fundo translúcido para itens ativos.
 
-.sidebar .submenu:hover .dropdown {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.sidebar .submenu > a::after {
-  content: " ▶";
-  font-size: 8px;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-
-.sidebar .submenu:hover > a::after {
-  content: " ▼";
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+      .nav-text::after {
+        transform: rotate(-135deg) translateY(-50%); // Ajusta a seta decorativa.
+      }
+    }
   }
-  100% {
-    opacity: 1;
+
+  ul {
+    padding: 0.5rem 0; // Adiciona espaçamento vertical aos subitens.
+
+    .nav-link {
+      position: relative; // Contexto de posicionamento.
+      color: rgba(255, 255, 255, 0.674); // Define a cor do link.
+      font-size: 1.0rem; // Define o tamanho da fonte.
+      font-weight: 300; // Define o peso da fonte.
+      padding-top: 0.5rem; // Espaçamento superior.
+      padding-left: 5.5rem; // Espaçamento à esquerda.
+      padding-bottom: 0.5rem; // Espaçamento inferior.
+      transition: all 0.5s; // Suaviza as transições.
+
+      &::before {
+        content: ""; // Decoração antes do texto.
+        height: 0.125rem; // Altura do decorativo.
+        width: 0.5rem; // Largura inicial.
+        background: rgba(30, 134, 204, 0.568); // Cor de fundo.
+        position: absolute; // Posiciona antes do texto.
+        left: 2.5rem; // Distância da margem esquerda.
+        top: 50%; // Centraliza verticalmente.
+        transform: translateY(-50%); // Ajusta o alinhamento vertical.
+        transition: all 0.5s; // Suaviza as transições.
+      }
+
+      &:hover {
+        color: rgb; // Altera a cor ao passar o mouse.
+        padding-left: 5.5rem; // Adiciona mais espaçamento à esquerda.
+        background-color: transparent; // Remove o fundo.
+
+        &::before {
+          width: 1.25rem; // Expande a largura do decorativo.
+          background: rgb(173, 216, 230); // Altera a cor do decorativo.
+        }
+      }
+
+      &.active-link {
+        color: var(--bs-light); // Altera a cor para itens ativos.
+        padding-left: 5.5rem; // Ajusta o espaçamento.
+
+        &::before {
+          width: 1.25rem; // Expande a largura do decorativo.
+          background: var(--bs-secondary); // Ajusta a cor.
+        }
+      }
+    }
   }
 }
-
-.sidebar .item-img img {
-  width: 80%;
-  margin: 20px auto;
-  display: block;
-  transition: transform 0.3s ease;
+.sidebar .nav-item .nav-link:hover .menu-icon {
+  transform: scale(1.1); /* Aumenta ligeiramente o ícone ao passar o mouse */
 }
-
-.sidebar .item-img:hover img {
-  transform: scale(1.1);
+.sidebar .submenu .dropdown .nav-link {
+  padding-top: 1px; /* Espaçamento superior reduzido */
+  padding-bottom: 2px; /* Espaçamento inferior reduzido */
+  font-size: 0.9rem; /* Fonte ligeiramente menor para o submenu */
 }
-
-.sidebar .nav-item .active {
-  background-color: #0056b3;
-  color: white;
+// barra de rolagem
+.sidebar::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
 }
-
-.sidebar .nav-item:hover {
-  background-color: #1e2b382d;
-  transform: translateX(5px);
-  transition: transform 0.2s ease-in-out;
+.sidebar::-webkit-scrollbar-thumb {
+  background: #141d35; /* Cor da barra de rolagem */
+  border-radius: 4px; /* Bordas arredondadas */
 }
 
 
 .sidebar ul, .sidebar li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none; /* Remove marcadores de lista padrão */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
 }
-
+.sidebar .nav-item {
+  position: 30px; /* Necessário para elementos filhos posicionados */
+  margin-bottom: 30px; /* Espaçamento entre os itens */
+}
+.sidebar .nav-item:hover {
+  background-color: #4e6d8ca9; /* Cor de fundo ao passar o mouse no item */
+  transform: translateX(3px); /* Move o item ligeiramente para a direita */
+  transition: transform 0.2s ease-in-out; /* Transição suave para a movimentação */
+}
 .sidebar .submenu .dropdown {
+  display: none;
+  padding-left: 20px;
   list-style-type: none;
-  padding-left: 0;
+  margin-top: 1px;
+}
+.sidebar .submenu .dropdown.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.sidebar .submenu > a span {
+  float: right;
+  font-size: 12px;
+  margin-top: 4px;
+  transition: transform 0.3s ease;
+}
+.sidebar .submenu > a span.expanded {
+  transform: rotate(90deg);
 }
 .menu-icon {
-  width: 35px; /* Tamanho do ícone */
-  height: 35px; /* Tamanho do ícone */
+  width: 30px; /* Define a largura do ícone */
+  height: 30px; /* Define a altura do ícone */
   margin-right: 10px; /* Espaço entre o ícone e o texto */
-  vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
-  transition: transform 0.3s ease; /* Transição suave para o efeito hover */
-
-}
-
-.sidebar .nav-item .nav-link:hover .menu-icon {
-  transform: scale(1.2); /* Aumenta o tamanho do ícone quando o item for hover */
+  vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+  transition: transform 0.3s ease; /* Suaviza o efeito de transformação ao passar o mouse */
 }
