@@ -1,8 +1,9 @@
-import { Component, input } from '@angular/core';
-import { LayoutComponent } from "../../../components/layout/layout.component";
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CardComponent } from "../../../components/form-components/card/card.component";
+
+import { CardComponent } from '../../../components/form-components/card/card.component';
 import { TableComponent } from '../../../components/form-components/table/table.component';
+import { LayoutComponent } from '../../../components/layout/layout.component';
 import { NovaDespesaComponent } from './modals/nova-despesa/nova-despesa.component';
 
 @Component({
@@ -36,6 +37,6 @@ export class DespesaComponent {
   openNovo() {
     this.router.navigate(['/pderp/financeiro/despesas/nova-despesa']);  }
 
-  
+
 
 }

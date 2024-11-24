@@ -11,43 +11,6 @@
   justify-content: space-between;
   align-items: center;
 
-  .hamburger {
-    display: none;
-    cursor: pointer;
-    position: relative;
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: all 0.3s ease-in-out;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    .line {
-      background-color: var(--bs-secondary);
-      width: 100%;
-      height: 3px;
-      border-radius: 3px;
-      transition: all 0.3s ease-in-out;
-    }
-
-    &.is-active {
-      .line {
-        background-color: var(--bs-light);
-      }
-
-      .line:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-
-      .line:nth-child(2) {
-        opacity: 0;
-      }
-
-      .line:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-    }
-  }
 
   .bell-icon {
     position: relative;
@@ -179,4 +142,98 @@
 
 #message-count {
   background-color: #33c1ff; /* Cor para a mensagem */
+}
+
+.logo-pdcase {
+  width: 150px; // Ajuste o tamanho desejado
+  height: auto; // Mantém a proporção
+  display: inline-block;
+  // Movendo para a direita
+  margin-left: 30px; // Use a distância desejada
+
+}
+
+
+.header {
+  background-color: black;
+  color: blue($color: #000000);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  left: 10px;
+
+  .h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: black;
+    line-height: 1.5;
+  }
+
+
+}
+.hamburger {
+  .line {
+    background: var(--bs-secondary);
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(1) {
+      width: 20px;
+    }
+
+    &:nth-child(2) {
+      width: 26px;
+    }
+
+    &:nth-child(3) {
+      width: 22px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    .line {
+      width: 26px;
+    }
+  }
+
+  .is-active .line {
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 10px;
+      height: 2px;
+    }
+
+    &:nth-child(2) {
+      transform: translateX(0px);
+      width: 22px;
+      height: 2px;
+    }
+
+    &:nth-child(1) {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+  }
+
+
 }

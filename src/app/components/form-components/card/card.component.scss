@@ -5,8 +5,8 @@
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-left: 20rem;
-  margin-right: 2rem;
+  margin-left: 40%;
+  margin-right: 40%;
 
   &:hover {
     transform: translateY(-5px);
@@ -27,3 +27,5 @@
     margin-bottom: 1rem;
   }
 }
+
+

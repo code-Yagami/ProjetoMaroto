@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from '../navbar/navbar.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [SidebarComponent, NavbarComponent],
+  imports: [CommonModule, RouterModule, NavbarComponent, SidebarComponent],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+  styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent {
-
-}
+export class LayoutComponent {}
