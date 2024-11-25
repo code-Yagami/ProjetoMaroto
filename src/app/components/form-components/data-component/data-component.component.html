@@ -1,1 +1,10 @@
-<p>data-component works!</p>
+<div class="form-group">
+    <label for="date">{{ label }}</label>
+    <input 
+      type="date" 
+      id="data" 
+      class="form-control" 
+      [(ngModel)]="selectedDate" 
+      (ngModelChange)="onDateChange($event)"
+    />
+  </div>
