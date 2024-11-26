@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="wrapper">
+    <div class="container main">
+      <div class="row">
+        <div class="col-md-6 left-side-menu d-flex flex-column align-items-center"><img src="assets/images/LOGO-2.png" alt="">
+          
+          <div class="message">
+          </div>
+          <div class="message_banner">
+            <p>Mais de 30 anos<br></p>
+          </div>
+          <div class="message_banner2">
+            <p>de grandes projetos</p>
+          </div>
+        </div>
+  
+        <div class="col-md-6 right">
+          <div class="input-box">
+            <header>Faça seu Login</header>
+  
+            <div class="input-field">
+              <input type="email" class="input" id="email" [(ngModel)]="email" name="email" required autocomplete="off" [ngClass]="{'has-content': email}">
+              <label for="email">E-mail</label>
+            </div>
+  
+            <div class="input-field">
+              <input type="password" class="input" id="pass" [(ngModel)]="password" name="password" required (keyup.enter)="onLogin()">
+              <label for="pass">Senha</label>
+              <div *ngIf="errorMessage" class="text-danger ">{{errorMessage}}</div>
+            </div>
+  
+            <div class="input-field">
+              <button type="button" class="btn btn-warning" (click)="onLogin()"
+              [routerLink]="['pderp/inicio']" routerLinkActive="router-link-active" >
+                Entrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
