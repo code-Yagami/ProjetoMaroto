@@ -14,7 +14,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'pderp/inicio', pathMatch: 'full' },
       { path: 'pderp/financeiro/despesas', component: DespesaComponent },
       { path: 'pderp/acesso/senha', component: SenhaComponent },
-      { path: 'pderp/pagamento/andiantamentos', component: AdiantamentosComponent}
+      { path: 'pderp/pagamentos/adiantamentos', component: AdiantamentosComponent}
     ]
   }
 ];
