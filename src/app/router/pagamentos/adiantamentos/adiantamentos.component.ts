@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardComponent } from '../../../components/form-components/card/card.component';
 import { ButtonComponentComponent } from '../../../components/form-components/button-component/button-component.component';
 import { ModalFormComponent } from '../../../components/form-components/modal-form/modal-form.component';
 import { InputComponentComponent } from '../../../components/form-components/input-component/input-component.component';
@@ -8,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-adiantamentos',
   standalone: true,
-  imports: [ButtonComponentComponent, ModalFormComponent, InputComponentComponent, TextareaComponentComponent, CommonModule,],
+  imports: [CardComponent,ButtonComponentComponent, ModalFormComponent, InputComponentComponent, TextareaComponentComponent, CommonModule,],
   templateUrl: './adiantamentos.component.html',
   styleUrl: './adiantamentos.component.scss',
 })
