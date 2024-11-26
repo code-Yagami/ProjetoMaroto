@@ -1,0 +1,239 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .bell-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: tada 1s infinite;
+  }
+
+  .pulse-css {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--bs-secondary);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid #fff;
+
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: var(--bs-secondary);
+      margin: auto;
+      transform: scale(0.3);
+      animation: pulse 3s infinite linear;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hamburger {
+      display: flex;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes tada {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+/* Container da navbar */
+.me-3, .me-5 {
+  position: relative;
+}
+
+/* Estilo para o link */
+.me-3 a, .me-5 a {
+  display: block;
+  position: relative;
+  text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilo para as imagens */
+.me-3 img, .me-5 img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animações para interação */
+  border-radius: 50%; /* Torna as bordas da imagem arredondadas */
+}
+
+/* Estilo para o badge (número de mensagens ou alertas) */
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff5733; /* Cor do badge (alerta ou mensagem) */
+  color: white;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+/* Interação quando o usuário passar o mouse */
+.me-3:hover img, .me-5:hover img {
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+  filter: brightness(1.5) saturate(1.5); /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Cores diferentes para os ícones */
+.me-3:hover img {
+  filter: brightness(1.5) saturate(1.5) hue-rotate(180deg); /* Ajusta a cor para o primeiro ícone */
+}
+.me-5:hover img {
+  filter: brightness(1.5) saturate(1.5) hue-rotate(90deg); /* Ajusta a cor para o segundo ícone */
+}
+
+/* Alterar a cor do badge dependendo do tipo (alerta ou mensagem) */
+#alert-count {
+  background-color: #ff5733; /* Cor para o alerta */
+}
+
+#message-count {
+  background-color: #33c1ff; /* Cor para a mensagem */
+}
+
+.logo-pdcase {
+  width: 150px; // Ajuste o tamanho desejado
+  height: auto; // Mantém a proporção
+  display: inline-block;
+  // Movendo para a direita
+  margin-left: 30px; // Use a distância desejada
+
+}
+
+
+.header {
+  background-color: black;
+  color: blue($color: #000000);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  left: 10px;
+
+  .h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: black;
+    line-height: 1.5;
+  }
+
+
+}
+.hamburger {
+  .line {
+    background: var(--bs-secondary);
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(1) {
+      width: 20px;
+    }
+
+    &:nth-child(2) {
+      width: 26px;
+    }
+
+    &:nth-child(3) {
+      width: 22px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    .line {
+      width: 26px;
+    }
+  }
+
+  .is-active .line {
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 10px;
+      height: 2px;
+    }
+
+    &:nth-child(2) {
+      transform: translateX(0px);
+      width: 22px;
+      height: 2px;
+    }
+
+    &:nth-child(1) {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+  }
+
+
+}

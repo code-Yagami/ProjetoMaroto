@@ -1,0 +1,10 @@
+<div class="form-group">
+  <label>{{ label }}</label>
+  <input
+    type="number"
+    class="form-control"
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    (input)="onChange($event)"
+  />
+</div>

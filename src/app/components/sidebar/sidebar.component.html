@@ -1,0 +1,22 @@
+<nav class="sidebar bg-light body-content">
+  <ul class="sidebar">
+    <li class="nav-item item-img">
+      <a class="active" [routerLink]="['/pderp/inicio']"></a>
+    </li>
+
+    <div class="risco"></div>
+
+    <li class="nav-item submenu" *ngFor="let item of menuItems; let i = index">
+      <a class="nav-link" (click)="toggleDropdown(i)">
+        <img [src]="item.icon" class="menu-icon" />
+        {{ item.label }}
+        <span [class.expanded]="openDropdowns[i]" class="nav-text"></span>
+      </a>
+      <ul class="dropdown" [class.show]="openDropdowns[i]">
+        <li *ngFor="let subItem of item.submenu">
+          <a [routerLink]="subItem.link" class="nav-link">{{ subItem.label }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

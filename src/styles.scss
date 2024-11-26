@@ -1,0 +1,56 @@
+/* Garantir que o HTML e o BODY ocupem 100% da altura */
+html, body {
+  height: 100%;   // Garantir que a altura seja 100% da tela
+  margin: 0;      // Remover margens para evitar qualquer espaço extra
+  padding: 0;     // Remover padding
+  overflow: hidden;  // Remover a barra de rolagem
+}
+
+.body-content {
+  background: url('assets/background.png') no-repeat center center fixed;
+  background-size: cover;  // A imagem vai cobrir toda a tela de forma responsiva
+  margin-left: -100%;
+  margin-right: -100%;
+  min-height: 100vh;  // Garantir que a altura do container ocupe 100% da altura da tela
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  padding-top: 1%;
+  
+
+
+  // Ajuste para responsividade em telas pequenas
+  @media (max-width: 768px) {
+    padding-left: 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 5px;
+  }
+}
+
+
+
+
+.body {
+  padding-top: 50px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  color: #0b1e31;
+}
+
+.navbar {
+  z-index: 1;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #eaeef1;
+}
