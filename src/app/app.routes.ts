@@ -7,11 +7,12 @@ import { SenhaComponent } from './router/administracao-acesso/senha/senha.compon
 import { InicioComponent } from './router/inicio/inicio/inicio.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'pderp/login', pathMatch: 'full'},
+  { path: 'pderp/login', component: LoginComponent},
   {
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', redirectTo: 'pderp/login', pathMatch: 'full'},
       { path: 'pderp/inicio', component: InicioComponent},
       { path: 'pderp/financeiro/despesas', component: DespesaComponent },
       { path: 'pderp/acesso/senha', component: SenhaComponent }
