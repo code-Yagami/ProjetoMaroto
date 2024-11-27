@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
-  imports: [],
   templateUrl: './pagination.component.html',
-  styleUrl: './pagination.component.scss'
+  styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
+  @Input() collectionSize = 0;
 
+  public page = 1;
+  public pageSize = 5;
 }
+ 
