@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DespesaComponent } from './router/financeiro/despesa/despesa.component';
 import { SenhaComponent } from './router/administracao-acesso/senha/senha.component';
 import { InicioComponent } from './router/inicio/inicio/inicio.component';
+import { AniversariosComponent } from './router/relatorios/aniversarios/aniversarios.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'pderp/login', pathMatch: 'full'},
@@ -14,7 +15,8 @@ export const routes: Routes = [
     children: [
       { path: 'pderp/inicio', component: InicioComponent},
       { path: 'pderp/financeiro/despesas', component: DespesaComponent },
-      { path: 'pderp/acesso/senha', component: SenhaComponent }
+      { path: 'pderp/acesso/senha', component: SenhaComponent },
+      { path: 'pderp/relatorios/aniversarios', component: AniversariosComponent},
     ]
   }
 ];
