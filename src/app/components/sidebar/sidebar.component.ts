@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SenhaComponent } from '../../router/administracao-acesso/senha/senha.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,7 +19,7 @@ export class SidebarComponent {
     {
       label: 'Administração de Acesso',
       icon: 'assets/img-menu/administracao.png',
-      submenu: [{ label: 'Alterar Senha', link: '/pderp/acesso/senha' }],
+      submenu: [{ label: 'Alterar Senha', link: '/pderp/acesso/senha',  action: () => this.openSenhaModal() }],
     },
     {
       label: 'Financeiro',
@@ -57,6 +58,7 @@ export class SidebarComponent {
       ],
     },
   ];
+  dialog: any;
 
   // Alterna o estado de visibilidade de um submenu
   toggleDropdown(index: number): void {
@@ -67,4 +69,11 @@ export class SidebarComponent {
   constructor() {
     this.openDropdowns = Array(this.menuItems.length).fill(false);
   }
+
+
+  openSenhaModal(): void {
+    this.dialog.open(SenhaComponent, {
+      width: '400px',
+      data: {} // Enviar dados se necessário
+    });}
 }

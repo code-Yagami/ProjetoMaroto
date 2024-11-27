@@ -15,6 +15,9 @@ import { ModalFormComponent } from "../../../components/form-components/modal-fo
   styleUrl: './senha.component.scss',
 })
 export class SenhaComponent {
+acaoBt() {
+throw new Error('Method not implemented.');
+}
   // Variáveis para armazenar os valores dos campos
   login: string = '';
   currentPassword: string = '';
