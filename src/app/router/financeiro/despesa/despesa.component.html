@@ -15,24 +15,28 @@
 
     <div class="row mb-3 dropdown-content">
       <div class="col-md-4">
-        <label for="status" class="form-label">Status</label>
-        <select id="status" class="form-control" name="status">
-          <option value="">Selecione</option>
-          
-        </select>
+        <label>Status</label>
+      <app-select-component  [options]="statusOptions"></app-select-component>
       </div>
 
       <div class="col-md-4">
-        <label for="colaborador" class="form-label">Colaborador</label>
-        <input
-          type="text"
-          id="colaborador"
-          class="form-control"
-          name="colaborador"
-        />
+        <label> Colaborador</label>
+        <app-input-component></app-input-component>
       </div>
     </div>
-    <app-table></app-table>
+    <div class="mb-4"></div>
+
+    <div>
+      <app-button-component
+        tipoBotao="primary"
+        textoBotao="novo"
+        (click)="openNovo()"
+        class="button1 mb-4"
+        [routerLink]="['nova-despesa']"
+        routerLinkActive="router-link-active"
+        >Pesquisar</app-button-component
+      >
+    </div>
     <div class="mb-4"></div>
 
     <div class="row mb-3 ms-3 me-3">

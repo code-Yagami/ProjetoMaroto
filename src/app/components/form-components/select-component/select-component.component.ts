@@ -16,4 +16,6 @@ export class SelectComponentComponent {
     const valorSelecionado = (event.target as HTMLSelectElement).value;
     this.seleciona.emit(valorSelecionado);
   }
+
+  @Input() options: string[] = [];
 }
