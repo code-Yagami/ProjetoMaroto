@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { InputComponentComponent } from "../../../components/form-components/input-component/input-component.component";
-import { SelectComponentComponent } from "../../../components/form-components/select-component/select-component.component";
 import { ButtonComponentComponent } from "../../../components/form-components/button-component/button-component.component";
 import { CardComponent } from "../../../components/form-components/card/card.component";
 
 @Component({
   selector: 'app-aniversarios',
   standalone: true,
-  imports: [InputComponentComponent, SelectComponentComponent, ButtonComponentComponent, CardComponent],
+  imports: [InputComponentComponent, InputComponentComponent, ButtonComponentComponent, CardComponent],
   templateUrl: './aniversarios.component.html',
   styleUrl: './aniversarios.component.scss'
 })
