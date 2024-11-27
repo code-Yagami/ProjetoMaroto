@@ -1,0 +1,45 @@
+html
+
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    Relatório: Aniversariantes
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
+        </div>
+        <div class="col-md-3">
+          <label for="cidade" class="form-label">Cidade</label>
+          <select id="cidade" class="form-select">
+            <option selected>Todos</option>
+            <option value="1">Cidade 1</option>
+            <option value="2">Cidade 2</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="mes" class="form-label">Mês</label>
+          <select id="mes" class="form-select">
+            <option selected>Todos</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="centroCusto" class="form-label">Centro de Custo</label>
+          <select id="centroCusto" class="form-select">
+            <option selected>Todos</option>
+            <option value="1">Centro 1</option>
+            <option value="2">Centro 2</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-primary">Imprimir</button>
+      </div>
+    </form>
+  </div>
+</div>
