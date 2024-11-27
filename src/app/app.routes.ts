@@ -7,16 +7,18 @@ import { InicioComponent } from './router/inicio/inicio/inicio.component';
 import { AniversariosComponent } from './router/relatorios/aniversarios/aniversarios.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'pderp/login', pathMatch: 'full'},
-  { path: 'pderp/login', component: LoginComponent},
+  { path: '', redirectTo: '/pderp/login', pathMatch: 'full' },
+  { path: 'pderp/login', component: LoginComponent },
+  
   {
-    path: '',
+    path: 'pderp',
     component: LayoutComponent,
     children: [
-      { path: 'pderp/inicio', component: InicioComponent},
-      { path: 'pderp/financeiro/despesas', component: DespesaComponent },
-      { path: 'pderp/acesso/senha', component: SenhaComponent },
-      { path: 'pderp/relatorios/aniversarios', component: AniversariosComponent},
+      { path: 'inicio', component: InicioComponent },
+      { path: 'financeiro/despesas', component: DespesaComponent },
+      { path: 'acesso/senha', component: SenhaComponent },
+      { path: 'relatorios/aniversarios', component: AniversariosComponent },
+      { path: 'colaboradores/aniversarios', component: AniversariosComponent },
     ]
   }
 ];
