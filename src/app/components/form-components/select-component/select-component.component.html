@@ -1,0 +1,4 @@
+<select id="parcela" class="form-control form-control-sm" (change)="onSelecionado($event)" name="parcela">
+    <option value="" disabled selected>Selecione</option>
+    <option *ngFor="let opcao of listaRender" [value]="opcao">{{ opcao }}</option>
+</select>
