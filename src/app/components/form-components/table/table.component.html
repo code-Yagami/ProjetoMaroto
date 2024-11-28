@@ -1,15 +1,55 @@
 <div class="table-responsive">
-  <table class="table  table-striped">
+  <table class="table table-striped">
     <thead>
       <tr>
         <th *ngFor="let column of columns">{{ column }}</th>
-        <!--<th>Ações</th> <!-- Coluna para botões --> 
+        <th *ngIf="showEditButton || showDeleteButton || showViewButton">
+          Ações
+        </th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let row of tableData" class="hover-row">
         <td *ngFor="let column of columns">{{ row[column] }}</td>
-      </tr>  
+
+        <td
+          *ngIf="showEditButton || showDeleteButton || showViewButton"
+          class="col-3"
+        >
+          <!-- Botão de Editar -->
+          <button
+            *ngIf="showEditButton"
+            type="button"
+            class="btn btn-outline-success btn-sm"
+            [title]="editButtonTitle"
+            (click)="onEdit(row)"
+          >
+            <i class="bi bi-pencil-square"></i> {{ editButtonTitle }}
+          </button>
+
+          <!-- Botão de Deletar -->
+          <button
+            *ngIf="showDeleteButton"
+            type="button"
+            class="btn btn-outline-danger btn-sm"
+            [title]="deleteButtonTitle"
+            (click)="onDelete(row)"
+          >
+            <i class="bi bi-trash"></i> {{ deleteButtonTitle }}
+          </button>
+
+          <!-- Botão de Visualizar -->
+          <button
+            *ngIf="showViewButton"
+            type="button"
+            class="btn btn-outline-info btn-sm"
+            [title]="viewButtonTitle"
+            (click)="onView(row)"
+          >
+            <i class="bi bi-eye"></i> {{ viewButtonTitle }}
+          </button>
+        </td>
+      </tr>
       <tr *ngIf="tableData.length === 0">
         <td [attr.colspan]="columns.length + 1">Sem registros...</td>
       </tr>
