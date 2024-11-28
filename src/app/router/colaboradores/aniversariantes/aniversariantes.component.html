@@ -1,0 +1,107 @@
+<div class="body-content">
+  <app-card [title]="'Colaboradores: Aniversáriantes'" [subtitle]="''">
+    <div class="row mb-3">
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Digite o nome" class="form-control" />
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <select id="cidade" class="form-control">
+            <option value="" disabled selected>Selecione a cidade</option>
+            <option value="sao-paulo">São Paulo</option>
+            <option value="rio-de-janeiro">Rio de Janeiro</option>
+            <option value="belo-horizonte">Belo Horizonte</option>
+            <option value="salvador">Salvador</option>
+            <option value="fortaleza">Fortaleza</option>
+            <option value="curitiba">Curitiba</option>
+            <option value="recife">Recife</option>
+            <option value="porto-alegre">Porto Alegre</option>
+            <option value="manaus">Manaus</option>
+            <option value="goiania">Goiânia</option>
+            <option value="brasilia">Brasília</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="centro-custo">Centro de Custo</label>
+          <select id="centro-custo" class="form-control">
+            <option value="" disabled selected>Selecione o centro de custo</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="financeiro">Financeiro</option>
+            <option value="comercial">Comercial</option>
+            <option value="tecnologia">Tecnologia</option>
+            <option value="marketing">Marketing</option>
+            <option value="recursos-humanos">Recursos Humanos</option>
+            <option value="logistica">Logística</option>
+            <option value="producao">Produção</option>
+            <option value="juridico">Jurídico</option>
+            <option value="pesquisa-desenvolvimento">Pesquisa e Desenvolvimento</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="mes">Mês</label>
+          <select id="mes" class="form-control">
+            <option selected>Selecione o mês</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+        </div>
+      </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Aniversário</th>
+              <th>Nome Completo</th>
+              <th>E-mail</th>
+              <th>Centro de Custo</th>
+              <th>Cidade</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>10/01/1990</td>
+              <td>João Silva</td>
+              <td>joao.silva_email.com</td>
+              <td>Financeiro</td>
+              <td>São Paulo</td>
+            </tr>
+            <tr>
+              <td>25/02/1985</td>
+              <td>Maria Oliveira</td>
+              <td>maria.oliveira_email.com</td>
+              <td>RH</td>
+              <td>Rio de Janeiro</td>
+            </tr>
+
+    <div class="row">
+      <div class="col-md-12 text-right">
+        <button tipoBotao="primary"class="button1 mb-4">Imprimir</button>
+      </div>
+
+    </div>
+
