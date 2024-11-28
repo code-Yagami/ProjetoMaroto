@@ -20,8 +20,8 @@ export class LivrosComponent {
   ];
 
   tableData = [
-    { Nome: 'x', Autor: 'John Doe', Editora: 'João', Edição: '2.000', Status: 'Active'},
-    { Nome: 'y', Autor: 'John Doe', Editora: 'João', Edição: '2.000', Status: 'Active'}
+    { Nome: 'x', Autor: 'A', Editora: 'João', Edição: 'A', Status: 'Disponível'},
+    { Nome: 'y', Autor: 'B', Editora: 'João', Edição: 'B', Status: 'Não Disponível'}
   ];
 
 }
