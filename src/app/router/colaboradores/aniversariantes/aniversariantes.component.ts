@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LayoutComponent } from '../../../components/layout/layout.component';
 import { InputComponentComponent } from "../../../components/form-components/input-component/input-component.component";
 import { ButtonComponentComponent } from "../../../components/form-components/button-component/button-component.component";
 import { CardComponent } from "../../../components/form-components/card/card.component";
@@ -8,11 +9,14 @@ import { TableComponent } from "../../../components/form-components/table/table.
 @Component({
   selector: 'app-aniversarios',
   standalone: true,
-  imports: [InputComponentComponent, InputComponentComponent, ButtonComponentComponent, CardComponent, DataComponentComponent, NumberComponentComponent, TableComponent],
-  templateUrl: './aniversarios.component.html',
-  styleUrl: './aniversarios.component.scss'
+  imports: [LayoutComponent, InputComponentComponent, ButtonComponentComponent, CardComponent, DataComponentComponent, NumberComponentComponent, TableComponent],
+  templateUrl: './aniversariantes.component.html',
+  styleUrls: ['./aniversariantes.component.scss']
 })
-export class RelatoriosComponent {
+export class AniversariantesComponent {
+openNovo() {
+throw new Error('Method not implemented.');
+}
   selectedCity: string = '';
   selectedMonth: string = '';
 
@@ -26,4 +30,3 @@ export class RelatoriosComponent {
     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
   ];
 }
-
