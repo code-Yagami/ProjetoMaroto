@@ -30,7 +30,7 @@ export class SidebarComponent {
       icon: 'assets/img-menu/despesa.png',
       submenu: [
         { label: 'Adiantamentos', link: '/pderp/pagamentos/adiantamentos' },
-        { label: 'Empréstimos', link: '#' },
+        { label: 'Empréstimos', link: '/pderp/pagamentos/emprestimos' },
       ],
     },
     {
