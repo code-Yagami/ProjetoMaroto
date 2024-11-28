@@ -6,6 +6,7 @@ import { SenhaComponent } from './router/administracao-acesso/senha/senha.compon
 import { InicioComponent } from './router/inicio/inicio/inicio.component';
 import { AdiantamentosComponent } from './router/pagamentos/adiantamentos/adiantamentos.component';
 import { LivrosComponent } from './router/biblioteca/livros/livros.component';
+import { CdComponent } from './router/biblioteca/cd/cd.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'pderp/login', pathMatch: 'full'},
@@ -18,7 +19,9 @@ export const routes: Routes = [
       { path: 'pderp/financeiro/despesas', component: DespesaComponent },
       { path: 'pderp/acesso/senha', component: SenhaComponent },
       { path: 'pderp/pagamentos/adiantamentos', component: AdiantamentosComponent},
-      { path: 'pderp/biblioteca/livros', component: LivrosComponent}
+      { path: 'pderp/biblioteca/livros', component: LivrosComponent},
+      { path: 'pderp/biblioteca/cd', component: CdComponent}
+
     ]
   }
 ];
