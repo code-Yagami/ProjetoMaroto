@@ -8,11 +8,13 @@ import { NovaDespesaComponent } from './modals/nova-despesa/nova-despesa.compone
 import { NumberComponentComponent } from "../../../components/form-components/number-component/number-component.component";
 import { DataComponentComponent } from "../../../components/form-components/data-component/data-component.component";
 import { InteractiveTableComponentComponent } from "../../../components/form-components/interactive-table-component/interactive-table-component.component";
+import { SelectComponentComponent } from '../../../components/form-components/select-component/select-component.component';
+import { InputComponentComponent } from '../../../components/form-components/input-component/input-component.component';
 
 @Component({
   selector: 'app-despesa',
   standalone: true,
-  imports: [LayoutComponent, RouterLink, CardComponent, TableComponent, NovaDespesaComponent, NumberComponentComponent, DataComponentComponent, InteractiveTableComponentComponent],
+  imports: [LayoutComponent, RouterLink, CardComponent, TableComponent, NovaDespesaComponent, NumberComponentComponent, DataComponentComponent, InteractiveTableComponentComponent, SelectComponentComponent, InputComponentComponent],
   templateUrl: './despesa.component.html',
   styleUrl: './despesa.component.scss'
 })
