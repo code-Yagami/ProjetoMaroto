@@ -1,50 +1,55 @@
 <div class="body-content">
-    <app-card [title]="'Emprestimos'" [subtitle]="''">
+  <app-card [title]="'Emprestimos'" [subtitle]="''">
 
-        <div class="form-container">
-            <div class="btn">
-              <app-button-component tipoBotao="warning" textoBotao="Novo" (click)="openModal()"></app-button-component>
-            </div>
+    <div class="form-container">
+      <div class="btn">
+        <app-button-component tipoBotao="warning" textoBotao="Novo" (click)="openModal()"></app-button-component>
+      </div>
+    </div>
+    
+    <div class="d-flex justify-content-center my-5">
+      <p>Não existem adiantamentos solicitados para este usuário.</p>
+    </div>
+
+
+    <app-modal-form [isVisible]="isModalVisible" [title]="'Novo Emprestimo'" [closeButtonText]="'Cancelar'"
+      [confirmButtonText]="'Salvar'" (confirm)="onModalConfirm()" (closeEvent)="closeModal()">
+      <div modal-body>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Tipo de pagamento:</label>
+            <app-select-component [listaRender]="PagamentosOptions" (seleciona)="selecionaTipoDePagamento($event)"
+              name="tipoDePagamento"></app-select-component>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Nº de Parcelas:</label>
+            <app-select-component [listaRender]="parcelaOptions" (seleciona)=" selecionaParcela($event)"
+              name="parcela"></app-select-component>
+          </div>
         </div>
 
-        <app-modal-form [isVisible]="isModalVisible" [title]="'Novo Emprestimo'" [closeButtonText]="'Cancelar'"
-        [confirmButtonText]="'Salvar'" (confirm)="onModalConfirm()" (closeEvent)="closeModal()">
-        <div modal-body>
-
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Tipo de pagamento:</label>
-              <app-select-component [listaRender]="PagamentosOptions" (seleciona)="selecionaTipoDePagamento($event)"
-                name="tipoDePagamento"></app-select-component>
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label">Nº de Parcelas:</label>
-              <app-select-component [listaRender]="parcelaOptions" (seleciona)=" selecionaParcela($event)"
-                name="parcela"></app-select-component>
-            </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Motivo:</label>
+            <app-select-component [listaRender]="motivoOptions" (seleciona)=" selecionaParcela($event)"
+              name="motivo"></app-select-component>
           </div>
 
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Motivo:</label>
-              <app-select-component [listaRender]="motivoOptions" (seleciona)=" selecionaParcela($event)"
-                name="motivo"></app-select-component>
-            </div>
-
-            <div class="col-md-6">
-              <label for="valor" class="form-label">Valor Total (R$):</label>
-              <app-input-component typeInput="number" idInput="valor" nameInput="valor"></app-input-component>
-            </div>
+          <div class="col-md-6">
+            <label for="valor" class="form-label">Valor Total (R$):</label>
+            <app-input-component typeInput="number" idInput="valor" nameInput="valor"></app-input-component>
           </div>
-
-          <div class="mb-3">
-            <label class="form-label">Descrição:</label>
-            <app-textarea-component idInput="descricao" nameInput="descricao"></app-textarea-component>
-          </div>
-
         </div>
-      </app-modal-form>
-  
-    </app-card>  
-</div>  
+
+        <div class="mb-3">
+          <label class="form-label">Descrição:</label>
+          <app-textarea-component idInput="descricao" nameInput="descricao"></app-textarea-component>
+        </div>
+
+      </div>
+    </app-modal-form>
+
+  </app-card>
+</div>
