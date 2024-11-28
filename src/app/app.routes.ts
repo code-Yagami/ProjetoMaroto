@@ -6,6 +6,7 @@ import { SenhaComponent } from './router/administracao-acesso/senha/senha.compon
 import { InicioComponent } from './router/inicio/inicio/inicio.component';
 import { AniversariosComponent } from './router/relatorios/aniversarios/aniversarios.component';
 import { AniversariantesComponent } from './router/colaboradores/aniversariantes/aniversariantes.component';
+import { CdComponent } from './router/biblioteca/cd/cd.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/pderp/login', pathMatch: 'full' },
@@ -20,6 +21,7 @@ export const routes: Routes = [
       { path: 'acesso/senha', component: SenhaComponent },
       { path: 'relatorios/aniversarios', component: AniversariosComponent },
       { path: 'colaboradores/aniversariantes', component: AniversariantesComponent },
+      { path: 'biblioteca/cd', component: CdComponent },
     ]
   }
 ];
