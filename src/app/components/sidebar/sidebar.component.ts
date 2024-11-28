@@ -53,7 +53,7 @@ export class SidebarComponent {
       label: 'Biblioteca',
       icon: 'assets/img-menu/livro.png',
       submenu: [
-        { label: 'Livros', link: '#' },
+        { label: 'Livros', link: 'pderp/biblioteca/livros' },
         { label: 'CD', link: '#' },
       ],
     },
