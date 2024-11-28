@@ -24,4 +24,11 @@ export class LivrosComponent {
     { Nome: 'y', Autor: 'B', Editora: 'João', Edição: 'B', Status: 'Não Disponível'}
   ];
 
+  showEdit = true; // Controle de exibição dos botões
+  showDelete = true;
+  showView = true;
+  editButtonTitle = 'Visualizar'; // Título personalizado para o botão Editar
+  deleteButtonTitle = 'Lista Espera'; // Título personalizado para o botão Deletar
+  viewButtonTitle = 'Solicitar';
+
 }

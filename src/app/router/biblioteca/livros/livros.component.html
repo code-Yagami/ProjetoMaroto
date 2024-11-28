@@ -26,42 +26,15 @@
       </div>
     </div>
     <app-table
-      [columns]="[
-        'Nome',
-        'Autor',
-        'Editora',
-        'Edição',
-        'Status',
-      ]"
-      [tableData]="tableData">
+      [columns]="['Nome', 'Autor', 'Editora', 'Edição', 'Status']"
+      [tableData]="tableData"
+      [showEditButton]="showEdit"
+      [showDeleteButton]="showDelete"
+      [showViewButton]="showView"
+      [editButtonTitle]="editButtonTitle"
+      [deleteButtonTitle]="deleteButtonTitle"
+      [viewButtonTitle]="viewButtonTitle"
+    >
     </app-table>
   </app-card>
 </div>
-<!-- 
-<div class="body-content">
-  <app-card [title]="'Despesa'" >
-    <div class="row mb-3">
-      <div class="col-md-4">
-      </div>
-      <div class="col-md-4">
-      </div>
-
-      <div class="col-md-4">
-      </div>
-    </div>
-
-    <div class="row mb-3 dropdown-content">
-      <div class="col-md-4">
-   
-      </div>
-
-      <div class="col-md-4">
-     
-      </div>
-    </div>
-    <div class="mb-4">
-
-    </div>
-</app-card>
-</div>
--->
