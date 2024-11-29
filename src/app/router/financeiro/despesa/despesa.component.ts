@@ -36,6 +36,20 @@ export class DespesaComponent {
     'Pago',
     'Reprovada'
   ];
+
+  tableData = [
+    { numero: 1, dataInicio: 'John Doe', colaborador: 'João', valor: '2.000', clienteProjeto: 'Active', centroCusto:'10.000' },
+    { numero: 2, dataInicio: 'John Doe', colaborador: 'João', valor: '2.000', clienteProjeto: 'Active', centroCusto:'10.000' },
+   
+  ];
+
+  showEdit = true; // Controle de exibição dos botões
+  showDelete = true;
+  showView = true;
+  editButtonTitle = 'Editar'; // Título personalizado para o botão Editar
+  deleteButtonTitle = 'Deletar'; // Título personalizado para o botão Deletar
+  viewButtonTitle = 'Visualizar';
+
   router: any;
   isModalVisible = false;
 

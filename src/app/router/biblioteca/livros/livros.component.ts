@@ -5,13 +5,13 @@ import { SelectComponentComponent } from '../../../components/form-components/se
 import { TableComponent } from '../../../components/form-components/table/table.component';
 
 @Component({
-  selector: 'app-cd',
+  selector: 'app-livros',
   standalone: true,
   imports: [InputComponentComponent, CardComponent, SelectComponentComponent, TableComponent],
-  templateUrl: './cd.component.html',
-  styleUrl: './cd.component.scss'
+  templateUrl: './livros.component.html',
+  styleUrl: './livros.component.scss'
 })
-export class CdComponent {
+export class LivrosComponent {
 
   statusOptions = [
     'Disponível',
@@ -19,11 +19,16 @@ export class CdComponent {
     'Em Atraso',
   ];
 
-  tipoOptions = [
-    'Aplicações',
-    'Desenvolvimento',
-    'Servidores',
-    'Sistema Operacional',
-    'Outros',
+  tableData = [
+    { nome: 'x', autor: 'A', editora: 'João', edição: 'A', status: 'Disponível'},
+    { nome: 'y', autor: 'B', editora: 'João', edição: 'B', status: 'Não Disponível'}
   ];
+
+  showEdit = true; // Controle de exibição dos botões
+  showDelete = true;
+  showView = true;
+  editButtonTitle = 'Visualizar'; // Título personalizado para o botão Editar
+  deleteButtonTitle = 'Lista Espera'; // Título personalizado para o botão Deletar
+  viewButtonTitle = 'Solicitar';
+
 }

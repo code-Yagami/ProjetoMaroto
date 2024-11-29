@@ -46,15 +46,15 @@ export class SidebarComponent {
         { label: 'Aniversariantes', link: '/pderp/colaboradores/aniversariantes' },
         { label: 'Manutenção Colaboradores', link: '/pderp/colaboradores/manutencao-colaboradores' },
         { label: 'Férias', link: '#' },
-        { label: 'Holerites', link: '#' },
+        { label: 'Holerites', link: 'pderp/colaboradores/holerites' },
       ],
     },
     {
       label: 'Biblioteca',
       icon: 'assets/img-menu/livro.png',
       submenu: [
-        { label: 'Livros', link: '#' },
-        { label: 'CD', link: '#' },
+        { label: 'Livros', link: 'pderp/biblioteca/livros' },
+        { label: 'CD', link: 'pderp/biblioteca/cd' },
       ],
     },
   ];

@@ -10,6 +10,8 @@ import { CdComponent } from './router/biblioteca/cd/cd.component';
 import { AdiantamentosComponent } from "./router/pagamentos/adiantamentos/adiantamentos.component";
 import { EmprestimosComponent } from './router/pagamentos/emprestimos/emprestimos.component';
 import { ManutencaoColaboradoresComponent } from './router/colaboradores/manutencao-colaboradores/manutencao-colaboradores.component';
+import { HoleritesComponent } from './router/colaboradores/holerites/holerites.component';
+import { LivrosComponent } from './router/biblioteca/livros/livros.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/pderp/login', pathMatch: 'full' },
@@ -27,7 +29,9 @@ export const routes: Routes = [
       { path: 'relatorios/aniversarios', component: AniversariosComponent },
       { path: 'colaboradores/aniversariantes', component: AniversariantesComponent },
       { path: 'biblioteca/cd', component: CdComponent },
-      { path: 'colaboradores/manutencao-colaboradores', component: ManutencaoColaboradoresComponent }
+      { path: 'colaboradores/manutencao-colaboradores', component: ManutencaoColaboradoresComponent },
+      { path: 'colaboradores/holerites', component: HoleritesComponent},
+      { path: 'biblioteca/livros', component: LivrosComponent}
     ]
   }
 ];

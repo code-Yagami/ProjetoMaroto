@@ -1,90 +1,37 @@
 <div class="body-content">
-  <app-card [title]="''" [subtitle]="''">
+
+  <app-card [title]="'CD'">
     <div class="row mb-3">
-
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" placeholder="Digite o nome" class="form-control" />
-        </div>
+      <div class="col-md-4">
+        <label>Nome</label>
+        <app-input-component></app-input-component>
       </div>
-
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="serial">Serial</label>
-          <input type="text" id="serial" placeholder="Digite o Serial" class="form-control" />
-        </div>
+      <div class="col-md-4">
+        <label>Status</label>
+        <app-select-component [options]="statusOptions"></app-select-component>
       </div>
-
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="linguagem">Linguagem</label>
-          <input type="text" id="linguagem" placeholder="Digite a Linguagem" class="form-control" />
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="num-cds">Nº CD's</label>
-          <input type="text" id="num-cds" placeholder="Digite" class="form-control" />
-        </div>
+      <div class="col-md-4">
+        <label>Serial</label>
+        <app-input-component></app-input-component>
       </div>
     </div>
 
     <div class="row mb-3">
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="status">Status</label>
-          <input type="text" id="status" placeholder="Selecione" class="form-control" />
-        </div>
+      <div class="col-md-4">
+        <label>N° CD's </label>
+        <app-input-component></app-input-component>
       </div>
-
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="tipo">Tipo</label>
-          <input type="text" id="tipo" placeholder="Selecione" class="form-control" />
-        </div>
+      <div class="col-md-4">
+        <label>Linguagem</label>
+        <app-select-component [options]="statusOptions"></app-select-component>
+      </div>
+      <div class="col-md-4">
+        <label>Tipo</label>
+        <app-select-component [options]="tipoOptions"></app-select-component>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-12 text-right">
-        <button tipoBotao="primary" class="button1 mb-4">Pesquisar</button>
+    <app-table></app-table>
+  </app-card>
 
-        <div class="row">
-          <div class="col-md-12">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Nome</th>
-                  <th>Serial</th>
-                  <th>Nº CD's</th>
-                  <th>Linguagem</th>
-                  <th>Tipo</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                <tr>
-                  <td>João Silva</td>
-                  <td>12345</td>
-                  <td>10</td>
-                  <td>Português</td>
-                  <td>Físico</td>
-                  <td>Ativo</td>
-                </tr>
-                <tr>
-                  <td>Maria Oliveira</td>
-                  <td>67890</td>
-                  <td>5</td>
-                  <td>Inglês</td>
-                  <td>Digital</td>
-                  <td>Inativo</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-        </div>
-    </div>
+</div>
