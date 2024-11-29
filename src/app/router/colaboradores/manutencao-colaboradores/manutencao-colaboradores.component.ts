@@ -93,10 +93,10 @@ export class ManutencaoColaboradoresComponent {
     { Colaborador: 'Fernanda.Almeida', CentroDeCusto: 'PD\\DRO-01\\', Cidade: 'Belém', DataFim: '', Status: 'Ativo' },
   ];
   
-  showEdit = false;
+  showEdit = true;
   showDelete = false;
   showView = true;
-  editButtonTitle = 'Editar';
+  editButtonTitle = 'Imprimir';
   deleteButtonTitle = 'Deletar';
   viewButtonTitle = 'Visualizar';
 
