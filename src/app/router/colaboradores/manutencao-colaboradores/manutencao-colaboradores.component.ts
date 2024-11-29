@@ -1,19 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgFor } from '@angular/common';
 import { CardComponent } from '../../../components/form-components/card/card.component';
 import { InputComponentComponent } from "../../../components/form-components/input-component/input-component.component";
 import { SelectComponentComponent } from "../../../components/form-components/select-component/select-component.component";
 import { FormsModule } from '@angular/forms';
 import { DataComponentComponent } from "../../../components/form-components/data-component/data-component.component";
 import { ButtonComponentComponent } from "../../../components/form-components/button-component/button-component.component";
-import { InteractiveTableComponentComponent } from "../../../components/form-components/interactive-table-component/interactive-table-component.component";
 import { RouterLink } from '@angular/router';
 import { TableComponent } from '../../../components/form-components/table/table.component';
 
 @Component({
   selector: 'app-manutencao-colaboradores',
   standalone: true,
-  imports: [InputComponentComponent, TableComponent, NgFor, RouterLink, SelectComponentComponent, FormsModule, DataComponentComponent, ButtonComponentComponent, InteractiveTableComponentComponent,CardComponent],
+  imports: [InputComponentComponent, TableComponent, RouterLink, SelectComponentComponent, FormsModule, DataComponentComponent, ButtonComponentComponent,CardComponent],
   templateUrl: './manutencao-colaboradores.component.html',
   styleUrl: './manutencao-colaboradores.component.scss'
 })
