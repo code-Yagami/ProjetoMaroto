@@ -44,7 +44,7 @@ export class SidebarComponent {
       icon: 'assets/img-menu/funcionario.png',
       submenu: [
         { label: 'Aniversariantes', link: '/pderp/colaboradores/aniversariantes' },
-        { label: 'Manutenção Colaboradores', link: '#' },
+        { label: 'Manutenção Colaboradores', link: '/pderp/colaboradores/manutencao-colaboradores' },
         { label: 'Férias', link: '#' },
         { label: 'Holerites', link: '#' },
       ],
