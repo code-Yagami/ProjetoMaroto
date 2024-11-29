@@ -27,11 +27,11 @@
     </div>
     <app-table
       [columns]="[
-         {header:'Nome', key:'nome'},
-         {header:'Autor', key:'autor'}, 
-         {header:'Editora', key:'editora'}, 
-         {header:'Edição', key:'edicao'}, 
-         {header:'Status', key:'status'}, 
+        { header: 'Nome', key: 'nome' },
+        { header: 'Autor', key: 'autor' },
+        { header: 'Editora', key: 'editora' },
+        { header: 'Edição', key: 'edicao' },
+        { header: 'Status', key: 'status' }
       ]"
       [tableData]="tableData"
       [showEditButton]="showEdit"
@@ -42,5 +42,9 @@
       [viewButtonTitle]="viewButtonTitle"
     >
     </app-table>
+    <div>
+      <app-button-component tipoBotao="primary" textoBotao="Pesquisar">
+      </app-button-component>
+    </div>
   </app-card>
 </div>

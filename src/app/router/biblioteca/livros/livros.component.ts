@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { CardComponent } from '../../../components/form-components/card/card.component';
 import { SelectComponentComponent } from '../../../components/form-components/select-component/select-component.component';
 import { TableComponent } from '../../../components/form-components/table/table.component';
+import { ButtonComponentComponent } from '../../../components/form-components/button-component/button-component.component';
 
 @Component({
   selector: 'app-livros',
   standalone: true,
-  imports: [InputComponentComponent, CardComponent, SelectComponentComponent, TableComponent],
+  imports: [InputComponentComponent, CardComponent, SelectComponentComponent, TableComponent, ButtonComponentComponent],
   templateUrl: './livros.component.html',
   styleUrl: './livros.component.scss'
 })
