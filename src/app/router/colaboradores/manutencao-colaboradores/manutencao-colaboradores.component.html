@@ -8,31 +8,31 @@
 
         <div class="col-md-4">
             <label class="form-label">Status:</label>
-            <app-select-component [listaRender]="['Ativo', 'Inativo']"
+            <app-select-component [options]="['Ativo', 'Inativo']"
                 (seleciona)="selecionaStatus($event)"></app-select-component>
         </div>
 
         <div class="col-md-4">
             <label class="form-label">Cidade:</label>
-            <app-select-component [listaRender]="listaCidade"
+            <app-select-component [options]="listaCidade"
                 (seleciona)="selecionaCidade($event)"></app-select-component>
         </div>
 
         <div class="col-md-4">
             <label class="form-label">Tipo Hierarquia:</label>
-            <app-select-component [listaRender]="listaHieraquias"
+            <app-select-component [options]="listaHieraquias"
                 (seleciona)="selecionaHierarquia($event)"></app-select-component>
         </div>
 
         <div class="col-md-4">
             <label class="form-label">Centro de Custo:</label>
-            <app-select-component [listaRender]="listaCentroCusto"
+            <app-select-component [options]="listaCentroCusto"
                 (seleciona)="selecionaCentro($event)"></app-select-component>
         </div>
 
         <div class="col-md-4">
             <label class="form-label">Cliente - Projeto:</label>
-            <app-select-component [listaRender]="listaProjetos"
+            <app-select-component [options]="listaProjetos"
                 (seleciona)="selecionaProjeto($event)"></app-select-component>
         </div>
 
