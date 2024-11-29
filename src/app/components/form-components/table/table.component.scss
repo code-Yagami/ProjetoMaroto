@@ -11,3 +11,16 @@
 .btn i {
   margin-right: 5px;
 }
+
+/* Classe aplicada nas linhas da tabela */
+.hover-row {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Adiciona sombra e leve elevação ao passar o mouse */
+.hover-row:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  background-color: #f8f9fa; /* Cor de fundo suave para destacar a linha */
+}
+
