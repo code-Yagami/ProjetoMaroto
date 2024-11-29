@@ -20,8 +20,8 @@ export class LivrosComponent {
   ];
 
   tableData = [
-    { Nome: 'x', Autor: 'A', Editora: 'João', Edição: 'A', Status: 'Disponível'},
-    { Nome: 'y', Autor: 'B', Editora: 'João', Edição: 'B', Status: 'Não Disponível'}
+    { nome: 'x', autor: 'A', editora: 'João', edição: 'A', status: 'Disponível'},
+    { nome: 'y', autor: 'B', editora: 'João', edição: 'B', status: 'Não Disponível'}
   ];
 
   showEdit = true; // Controle de exibição dos botões
