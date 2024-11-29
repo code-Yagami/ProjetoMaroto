@@ -7,6 +7,7 @@ import { InicioComponent } from './router/inicio/inicio/inicio.component';
 import { AdiantamentosComponent } from './router/pagamentos/adiantamentos/adiantamentos.component';
 import { LivrosComponent } from './router/biblioteca/livros/livros.component';
 import { CdComponent } from './router/biblioteca/cd/cd.component';
+import { HoleritesComponent } from './router/colaboradores/holerites/holerites.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'pderp/login', pathMatch: 'full'},
@@ -20,8 +21,8 @@ export const routes: Routes = [
       { path: 'pderp/acesso/senha', component: SenhaComponent },
       { path: 'pderp/pagamentos/adiantamentos', component: AdiantamentosComponent},
       { path: 'pderp/biblioteca/livros', component: LivrosComponent},
-      { path: 'pderp/biblioteca/cd', component: CdComponent}
-
+      { path: 'pderp/biblioteca/cd', component: CdComponent},
+      { path: 'pderp/colaboradores/holerites', component: HoleritesComponent}
     ]
   }
 ];

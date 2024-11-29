@@ -46,7 +46,7 @@ export class SidebarComponent {
         { label: 'Aniversariantes', link: '/pderp/colaboradores/aniversariantes' },
         { label: 'Manutenção Colaboradores', link: '#' },
         { label: 'Férias', link: '#' },
-        { label: 'Holerites', link: '#' },
+        { label: 'Holerites', link: 'pderp/colaboradores/holerites' },
       ],
     },
     {
