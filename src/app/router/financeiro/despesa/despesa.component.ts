@@ -38,8 +38,8 @@ export class DespesaComponent {
   ];
 
   tableData = [
-    { Numero: 1, DataInicio: 'John Doe', Colaborador: 'João', Valor: '2.000', ClienteProjeto: 'Active', CentroCusto:'10.000' },
-    { Numero: 2, DataInicio: 'John Doe', Colaborador: 'João', Valor: '2.000', ClienteProjeto: 'Active', CentroCusto:'10.000' },
+    { numero: 1, dataInicio: 'John Doe', colaborador: 'João', valor: '2.000', clienteProjeto: 'Active', centroCusto:'10.000' },
+    { numero: 2, dataInicio: 'John Doe', colaborador: 'João', valor: '2.000', clienteProjeto: 'Active', centroCusto:'10.000' },
    
   ];
 

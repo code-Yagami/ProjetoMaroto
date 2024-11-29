@@ -1,0 +1,12 @@
+<div class="body-content">
+  <app-card [title]="'Holerites'">
+    <app-table
+      [columns]="[
+        {header: 'Mês de Referência', key:'mesDeReferencia'},
+        {header: 'Tipo Holerite', key:'tipoHolerite'}
+      ]"
+      [tableData]="tableData"
+    >
+    </app-table>
+  </app-card>
+</div>

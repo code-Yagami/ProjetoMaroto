@@ -26,7 +26,13 @@
       </div>
     </div>
     <app-table
-      [columns]="['Nome', 'Autor', 'Editora', 'Edição', 'Status']"
+      [columns]="[
+         {header:'Nome', key:'nome'},
+         {header:'Autor', key:'autor'}, 
+         {header:'Editora', key:'editora'}, 
+         {header:'Edição', key:'edicao'}, 
+         {header:'Status', key:'status'}, 
+      ]"
       [tableData]="tableData"
       [showEditButton]="showEdit"
       [showDeleteButton]="showDelete"

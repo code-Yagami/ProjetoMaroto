@@ -12,6 +12,7 @@ import { TableComponent } from '../../../components/form-components/table/table.
   styleUrl: './cd.component.scss'
 })
 export class CdComponent {
+
   statusOptions = [
     'Disponível',
     'Não Disponível',
