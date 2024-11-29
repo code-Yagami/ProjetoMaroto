@@ -1,49 +1,68 @@
 <div class="body-content">
     <app-card [title]="'Manutenção colaboradores'" [subtitle]="''">
         <div class="row mb-3">
-        <div class="col-md-4">
-            <label class="form-label">Colaborador:</label>
-            <app-input-component typeInput="text"></app-input-component>
+            <div class="col-md-4">
+                <label class="form-label">Colaborador:</label>
+                <app-input-component typeInput="text"></app-input-component>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Status:</label>
+                <app-select-component [options]="['Ativo', 'Inativo']"
+                    (seleciona)="selecionaStatus($event)"></app-select-component>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Cidade:</label>
+                <app-select-component [options]="listaCidade"
+                    (seleciona)="selecionaCidade($event)"></app-select-component>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Tipo Hierarquia:</label>
+                <app-select-component [options]="listaHieraquias"
+                    (seleciona)="selecionaHierarquia($event)"></app-select-component>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Centro de Custo:</label>
+                <app-select-component [options]="listaCentroCusto"
+                    (seleciona)="selecionaCentro($event)"></app-select-component>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Cliente - Projeto:</label>
+                <app-select-component [options]="listaProjetos"
+                    (seleciona)="selecionaProjeto($event)"></app-select-component>
+            </div>
+
+            <div class="col-md-4">
+                <app-data-component [label]="'Data Admissão - Início:'"
+                    [(selectedDate)]="selectedDate"></app-data-component>
+            </div>
+
+            <div class="col-md-4">
+                <app-data-component [label]="'Fim:'" [(selectedDate)]="selectedDate"></app-data-component>
+            </div>
         </div>
 
-        <div class="col-md-4">
-            <label class="form-label">Status:</label>
-            <app-select-component [options]="['Ativo', 'Inativo']"
-                (seleciona)="selecionaStatus($event)"></app-select-component>
-        </div>
-
-        <div class="col-md-4">
-            <label class="form-label">Cidade:</label>
-            <app-select-component [options]="listaCidade"
-                (seleciona)="selecionaCidade($event)"></app-select-component>
-        </div>
-
-        <div class="col-md-4">
-            <label class="form-label">Tipo Hierarquia:</label>
-            <app-select-component [options]="listaHieraquias"
-                (seleciona)="selecionaHierarquia($event)"></app-select-component>
-        </div>
-
-        <div class="col-md-4">
-            <label class="form-label">Centro de Custo:</label>
-            <app-select-component [options]="listaCentroCusto"
-                (seleciona)="selecionaCentro($event)"></app-select-component>
-        </div>
-
-        <div class="col-md-4">
-            <label class="form-label">Cliente - Projeto:</label>
-            <app-select-component [options]="listaProjetos"
-                (seleciona)="selecionaProjeto($event)"></app-select-component>
-        </div>
-
-        <div class="col-md-4">
-            <app-data-component [label]="'Data Admissão - Início:'"
-                [(selectedDate)]="selectedDate"></app-data-component>
-        </div>
-
-        <div class="col-md-4">
-            <app-data-component [label]="'Fim:'" [(selectedDate)]="selectedDate"></app-data-component>
-        </div>
-    </div>
+        <app-table
+        [columns]="[
+          { header: 'Colaborador', key: 'Colaborador' },
+          { header: 'Centro de Custo', key: 'CentroDeCusto' },
+          { header: 'Cidade', key: 'Cidade' },
+          { header: 'Data Fim', key: 'DataFim' },
+          { header: 'Status', key: 'Status' }
+        ]"
+        [tableData]="tableData"
+        [showEditButton]="showEdit"
+        [showDeleteButton]="showDelete"
+        [showViewButton]="showView"
+        [editButtonTitle]="editButtonTitle"
+        [deleteButtonTitle]="deleteButtonTitle"
+        [viewButtonTitle]="viewButtonTitle"
+      >
+      </app-table>
+  
     </app-card>
 </div>
