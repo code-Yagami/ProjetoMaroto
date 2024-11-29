@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class TableComponent {
 
 
- @Input() columns: string[] = []; // Colunas definidas externamente
+  @Input() columns: { header: string, key: string }[] = []; // Colunas com nomes de exibição e chaves
   @Input() tableData: any[] = [];  // Dados da tabela
   @Input() showEditButton: boolean = false; // Controla a exibição do botão Editar
   @Input() editButtonTitle: string = 'Editar'; // Título do botão Editar

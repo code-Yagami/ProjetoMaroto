@@ -2,7 +2,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th *ngFor="let column of columns">{{ column }}</th>
+        <th *ngFor="let column of columns">{{ column.header }}</th>
         <th *ngIf="showEditButton || showDeleteButton || showViewButton">
           Ações
         </th>
@@ -10,7 +10,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let row of tableData" class="hover-row">
-        <td *ngFor="let column of columns">{{ row[column] }}</td>
+        <td *ngFor="let column of columns">{{ row[column.key] }}</td>
 
         <td
           *ngIf="showEditButton || showDeleteButton || showViewButton"
