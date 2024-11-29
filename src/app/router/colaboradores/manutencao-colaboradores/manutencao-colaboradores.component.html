@@ -46,23 +46,24 @@
             </div>
         </div>
 
-        <app-table
-        [columns]="[
+        <div class="col-12 d-flex justify-content-end div-button-imprimir mb-4">
+            <app-button-component tipoBotao="primary" textoBotao="Novo Colaborador" class="me-2" (click)="openNovo()"
+                [routerLink]="['novo-colaborador']" routerLinkActive="router-link-active"></app-button-component>
+                
+            <app-button-component tipoBotao="warning" textoBotao="Pesquisar"></app-button-component>
+        </div>
+
+
+        <app-table [columns]="[
           { header: 'Colaborador', key: 'Colaborador' },
           { header: 'Centro de Custo', key: 'CentroDeCusto' },
           { header: 'Cidade', key: 'Cidade' },
           { header: 'Data Fim', key: 'DataFim' },
           { header: 'Status', key: 'Status' }
-        ]"
-        [tableData]="tableData"
-        [showEditButton]="showEdit"
-        [showDeleteButton]="showDelete"
-        [showViewButton]="showView"
-        [editButtonTitle]="editButtonTitle"
-        [deleteButtonTitle]="deleteButtonTitle"
-        [viewButtonTitle]="viewButtonTitle"
-      >
-      </app-table>
-  
+        ]" [tableData]="tableData" [showEditButton]="showEdit" [showDeleteButton]="showDelete"
+            [showViewButton]="showView" [editButtonTitle]="editButtonTitle" [deleteButtonTitle]="deleteButtonTitle"
+            [viewButtonTitle]="viewButtonTitle">
+        </app-table>
+
     </app-card>
 </div>
