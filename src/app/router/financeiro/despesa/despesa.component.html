@@ -41,12 +41,12 @@
 
     <app-table
       [columns]="[
-        'Numero',
-        'DataInicio',
-        'Colaborador',
-        'Valor',
-        'ClienteProjeto',
-        'CentroCusto'
+        { header: 'Número', key: 'numero' },
+        { header: 'Data Início', key: 'dataInicio' },
+        { header: 'Colaborador', key: 'colaborador' },
+        { header: 'Valor', key: 'valor' },
+        { header: 'Cliente/Projeto', key: 'clienteProjeto' },
+        { header: 'Centro de Custo', key: 'centroCusto' }
       ]"
       [tableData]="tableData"
       [showEditButton]="showEdit"
