@@ -1,14 +1,16 @@
-import { InputComponentComponent } from './../../../components/form-components/input-component/input-component.component';
 import { Component } from '@angular/core';
+
+import { ButtonComponentComponent } from '../../../components/form-components/button-component/button-component.component';
 import { CardComponent } from '../../../components/form-components/card/card.component';
+import { PaginationComponent } from '../../../components/form-components/pagination/pagination.component';
 import { SelectComponentComponent } from '../../../components/form-components/select-component/select-component.component';
 import { TableComponent } from '../../../components/form-components/table/table.component';
-import { ButtonComponentComponent } from '../../../components/form-components/button-component/button-component.component';
+import { InputComponentComponent } from './../../../components/form-components/input-component/input-component.component';
 
 @Component({
   selector: 'app-livros',
   standalone: true,
-  imports: [InputComponentComponent, CardComponent, SelectComponentComponent, TableComponent, ButtonComponentComponent],
+  imports: [InputComponentComponent, CardComponent, SelectComponentComponent, TableComponent, ButtonComponentComponent, PaginationComponent],
   templateUrl: './livros.component.html',
   styleUrl: './livros.component.scss'
 })
@@ -32,4 +34,6 @@ export class LivrosComponent {
   deleteButtonTitle = 'Lista Espera'; // Título personalizado para o botão Deletar
   viewButtonTitle = 'Solicitar';
 
+
+  
 }

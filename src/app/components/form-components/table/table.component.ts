@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, PaginationComponent],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })
@@ -33,6 +34,9 @@ export class TableComponent {
     console.log('Visualizando:', row);
   }
   
-
+  onPageChange(page: number): void {
+    console.log('Página atual:', page);
+    // Atualize os dados com base na página selecionada
+  }
   
 }
