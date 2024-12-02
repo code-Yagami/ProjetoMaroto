@@ -1,0 +1,51 @@
+// Estilo base para a paginação (herda do Bootstrap)
+.pagination {
+  margin: 1rem 0;
+  font-size: 1rem;
+
+  // Alinha os botões à direita
+  &.justify-content-end {
+    justify-content: flex-end;
+  }
+
+  // Estilo para os itens da paginação
+  .page-item {
+    margin: 0 0.25rem;
+
+    &.active .page-link {
+      background-color: #0d6efd; // Cor de fundo do item ativo (Bootstrap primary)
+      color: #fff; // Cor do texto no item ativo
+      border-color: #0d6efd; // Borda do item ativo
+    }
+
+    &.disabled .page-link {
+      color: #6c757d; // Cor do texto para itens desabilitados (Bootstrap secondary)
+      pointer-events: none; // Remove interatividade
+      background-color: #f8f9fa; // Cor de fundo para itens desabilitados
+      border-color: #dee2e6; // Borda para itens desabilitados
+    }
+
+    &:not(.active):hover .page-link {
+      background-color: #e9ecef; // Fundo ao passar o mouse
+      color: #0d6efd; // Texto no hover
+    }
+  }
+
+  // Botões de navegação (links de página)
+  .page-link {
+    color: #0d6efd; // Cor do texto padrão (Bootstrap primary)
+    border: 1px solid #dee2e6; // Borda padrão
+    border-radius: 0.25rem; // Bordas arredondadas
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: none; // Remove sublinhado
+      background-color: #e9ecef; // Fundo ao passar o mouse
+      color: #0d6efd; // Texto no hover
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); // Efeito de foco
+    }
+  }
+}
