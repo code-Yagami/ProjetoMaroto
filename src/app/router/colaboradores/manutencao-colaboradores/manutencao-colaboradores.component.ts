@@ -89,7 +89,19 @@ export class ManutencaoColaboradoresComponent {
     { Colaborador: 'Daniela.Costa', CentroDeCusto: 'PD\\DRO-01\\AL\\SEFAZ-AL\\', Cidade: 'São Luiz', DataFim: '', Status: 'Ativo' },
     { Colaborador: 'Eduardo.Pereira', CentroDeCusto: 'PD\\', Cidade: 'Belo Horizonte', DataFim: '', Status: 'Ativo' },
     { Colaborador: 'Fernanda.Almeida', CentroDeCusto: 'PD\\DRO-01\\', Cidade: 'Belém', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Gabriel.Martins', CentroDeCusto: 'PD\\DRO-02\\', Cidade: 'Curitiba', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Helena.Ramos', CentroDeCusto: 'PD\\DRO-03\\', Cidade: 'Recife', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Isabela.Andrade', CentroDeCusto: 'PD\\DRO-03\\PE\\', Cidade: 'Porto Alegre', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'João.Costa', CentroDeCusto: 'PD\\DRO-04\\', Cidade: 'Fortaleza', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Lara.Nogueira', CentroDeCusto: 'PD\\DRO-05\\', Cidade: 'Manaus', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Marcos.Silva', CentroDeCusto: 'PD\\DRO-05\\AM\\', Cidade: 'Natal', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Nina.Rocha', CentroDeCusto: 'PD\\DRO-06\\', Cidade: 'Salvador', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Otávio.Lima', CentroDeCusto: 'PD\\DRO-07\\', Cidade: 'João Pessoa', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Patrícia.Gomes', CentroDeCusto: 'PD\\DRO-08\\', Cidade: 'Vitória', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Rafael.Alves', CentroDeCusto: 'PD\\DRO-09\\', Cidade: 'Campo Grande', DataFim: '', Status: 'Ativo' },
+    { Colaborador: 'Sofia.Sousa', CentroDeCusto: 'PD\\DRO-10\\', Cidade: 'Florianópolis', DataFim: '', Status: 'Ativo' },
   ];
+
   
   showEdit = true;
   showDelete = false;
