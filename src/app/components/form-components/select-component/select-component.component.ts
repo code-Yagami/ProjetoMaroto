@@ -17,5 +17,5 @@ export class SelectComponentComponent {
     this.seleciona.emit(valorSelecionado);
   }
 
-  @Input() options: string[] = [];
+  @Input() options: any[] = [];
 }

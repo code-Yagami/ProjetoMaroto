@@ -19,13 +19,13 @@
         <div class="row mb-3">
           <div class="col-md-6">
             <label class="form-label">Tipo de pagamento:</label>
-            <app-select-component [listaRender]="PagamentosOptions" (seleciona)="selecionaTipoDePagamento($event)"
+            <app-select-component [options]="PagamentosOptions" (seleciona)="selecionaTipoDePagamento($event)"
               name="tipoDePagamento"></app-select-component>
           </div>
 
           <div class="col-md-6">
             <label class="form-label">Nº de Parcelas:</label>
-            <app-select-component [listaRender]="parcelaOptions" (seleciona)=" selecionaParcela($event)"
+            <app-select-component [options]="parcelaOptions" (seleciona)=" selecionaParcela($event)"
               name="parcela"></app-select-component>
           </div>
         </div>
@@ -33,7 +33,7 @@
         <div class="row mb-3">
           <div class="col-md-6">
             <label class="form-label">Motivo:</label>
-            <app-select-component [listaRender]="motivoOptions" (seleciona)=" selecionaParcela($event)"
+            <app-select-component [options]="motivoOptions" (seleciona)=" selecionaParcela($event)"
               name="motivo"></app-select-component>
           </div>
 
