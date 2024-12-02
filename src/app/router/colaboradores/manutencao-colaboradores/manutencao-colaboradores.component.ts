@@ -94,7 +94,7 @@ export class ManutencaoColaboradoresComponent {
   showEdit = true;
   showDelete = false;
   showView = true;
-  editButtonTitle = 'Imprimir';
+  editButtonTitle = 'Editar';
   deleteButtonTitle = 'Deletar';
   viewButtonTitle = 'Visualizar';
 
