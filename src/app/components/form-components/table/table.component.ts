@@ -1,12 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { PaginationComponent } from '../pagination/pagination.component';
 import { Router } from '@angular/router';
-=======
-import { Router } from '@angular/router';
->>>>>>> feat/27-adicionar-link-no-botao-de-editar-tela-de-manuntencao-de-colaboradores-levando-para-a
 
 @Component({
   selector: 'app-table',
