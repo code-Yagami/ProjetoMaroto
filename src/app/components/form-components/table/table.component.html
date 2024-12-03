@@ -23,6 +23,8 @@
             class="btn btn-outline-success btn-sm"
             [title]="editButtonTitle"
             (click)="onEdit(row)"
+            [routerLink]="['editar-curriculo']"
+            routerLinkActive="router-link-active"
           >
             <i class="bi bi-pencil-square"></i> {{ editButtonTitle }}
           </button>
