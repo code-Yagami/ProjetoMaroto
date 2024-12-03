@@ -4,8 +4,8 @@
       class="nav-link"
       [class.active]="activeTab === tab.id"
       (click)="setActiveTab(tab.id)"
-      href="#"
-    >
+      [routerLink]="tab.link"
+      >
       {{ tab.label }}
     </a>
   </li>

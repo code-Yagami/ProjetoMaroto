@@ -15,6 +15,7 @@ import { HoleritesComponent } from './router/colaboradores/holerites/holerites.c
 import { LivrosComponent } from './router/biblioteca/livros/livros.component';
 import { CdComponent } from './router/biblioteca/cd/cd.component';
 import { EditarCurriculoComponent } from './router/colaboradores/manutencao-colaboradores/editar-curriculo/editar-curriculo.component';
+import { DadosFinanceirosComponent } from './router/colaboradores/manutencao-colaboradores/editar-curriculo/dados-financeiros/dados-financeiros.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/pderp/login', pathMatch: 'full' },
@@ -35,7 +36,8 @@ export const routes: Routes = [
       { path: 'pderp/colaboradores/holerites', component: HoleritesComponent},
       { path: 'pderp/biblioteca/cd', component: CdComponent },
       { path: 'pderp/biblioteca/livros', component: LivrosComponent},
-      { path: 'pderp/colaboradores/manutencao-colaboradores/editar-curriculo', component: EditarCurriculoComponent}
+      { path: 'pderp/colaboradores/manutencao-colaboradores/editar-curriculo', component: EditarCurriculoComponent},
+      { path: 'pderp/colaboradores/manutencao-colaboradores/editar-curriculo/dados-financeiros', component: DadosFinanceirosComponent}
     ]
   }
 ];

@@ -1,17 +1,16 @@
-import { DadosFinanceirosComponent } from './dados-financeiros/dados-financeiros.component';
 import { Component } from '@angular/core';
-import { CardComponent } from "../../../../components/form-components/card/card.component";
-import { NavTabsComponent, Tab } from '../../../../components/form-components/nav-tabs/nav-tabs.component';
-import { CommonModule } from '@angular/common';
+import { CardComponent } from "../../../../../components/form-components/card/card.component";
+import { NavTabsComponent, Tab } from "../../../../../components/form-components/nav-tabs/nav-tabs.component";
 
 @Component({
-  selector: 'app-editar-curriculo',
+  selector: 'app-dados-financeiros',
   standalone: true,
-  imports: [CardComponent, NavTabsComponent, CommonModule],
-  templateUrl: './editar-curriculo.component.html',
-  styleUrl: './editar-curriculo.component.scss'
+  imports: [CardComponent, NavTabsComponent],
+  templateUrl: './dados-financeiros.component.html',
+  styleUrl: './dados-financeiros.component.scss'
 })
-export class EditarCurriculoComponent {
+export class DadosFinanceirosComponent {
+
 
   tabs: Tab[] = [
     { id: 'personal-data', label: 'Dados Pessoais', link: '/dados-pessoais' },
