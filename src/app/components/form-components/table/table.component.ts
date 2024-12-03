@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 <<<<<<< HEAD
 import { PaginationComponent } from '../pagination/pagination.component';
+import { Router } from '@angular/router';
 =======
 import { Router } from '@angular/router';
 >>>>>>> feat/27-adicionar-link-no-botao-de-editar-tela-de-manuntencao-de-colaboradores-levando-para-a
@@ -43,10 +44,10 @@ export class TableComponent {
   onView(row: any) {
     console.log('Visualizando:', row);
   }
-  
+
   onPageChange(page: number): void {
     console.log('Página atual:', page);
     // Atualize os dados com base na página selecionada
   }
-  
+
 }
