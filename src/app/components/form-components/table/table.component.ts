@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
@@ -21,9 +22,15 @@ export class TableComponent {
   @Input() deleteButtonTitle: string = 'Deletar'; // Título do botão Deletar
   @Input() showViewButton: boolean = false; // Controla a exibição do botão Visualizar
   @Input() viewButtonTitle: string = 'Visualizar'; // Título do botão Visualizar
+  @Input() editButtonLink: string = '';
+
+  constructor(private router: Router) {}
 
   onEdit(row: any) {
     console.log('Editando:', row);
+    if (this.editButtonLink) {
+      this.router.navigate([this.editButtonLink]);
+    }
   }
 
   onDelete(row: any) {
@@ -33,10 +40,10 @@ export class TableComponent {
   onView(row: any) {
     console.log('Visualizando:', row);
   }
-  
+
   onPageChange(page: number): void {
     console.log('Página atual:', page);
     // Atualize os dados com base na página selecionada
   }
-  
+
 }
