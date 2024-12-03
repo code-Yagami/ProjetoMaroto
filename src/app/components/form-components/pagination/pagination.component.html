@@ -1,18 +1,22 @@
-<div class="pagination-wrapper">
-  <div class="form-group">
-    <select class="form-select" [(ngModel)]="pageSize">
-      <option [ngValue]="5">5 por página</option>
-      <option [ngValue]="10">10 por página</option>
-      <option [ngValue]="20">20 por página</option>
-    </select>
-  </div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end">
+    <!-- Botão Anterior -->
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button class="page-link" (click)="goToPrevious()">Anterior</button>
+    </li>
 
-  <ngb-pagination
-    [(page)]="page"
-    [pageSize]="pageSize"
-    [maxSize]="4"
-    [rotate]="true"
-    [ellipses]="false"
-    [boundaryLinks]="true"
-    [collectionSize]="collectionSize"></ngb-pagination>
-</div>
+    <!-- Números das Páginas -->
+    <li
+      *ngFor="let page of pages"
+      class="page-item"
+      [class.active]="page === currentPage"
+    >
+      <button class="page-link" (click)="goToPage(page)">{{ page }}</button>
+    </li>
+
+    <!-- Botão Próximo -->
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button class="page-link" (click)="goToNext()">Próximo</button>
+    </li>
+  </ul>
+</nav>
