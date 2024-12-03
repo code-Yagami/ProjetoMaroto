@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs simple-modern-tabs">
+  <li class="nav-item" *ngFor="let tab of tabs">
+    <a
+      class="nav-link"
+      [class.active]="activeTab === tab.id"
+      (click)="setActiveTab(tab.id)"
+      href="#"
+    >
+      {{ tab.label }}
+    </a>
+  </li>
+</ul>
