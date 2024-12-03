@@ -1,7 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { PaginationComponent } from '../pagination/pagination.component';
+=======
+import { Router } from '@angular/router';
+>>>>>>> feat/27-adicionar-link-no-botao-de-editar-tela-de-manuntencao-de-colaboradores-levando-para-a
 
 @Component({
   selector: 'app-table',
@@ -21,9 +25,15 @@ export class TableComponent {
   @Input() deleteButtonTitle: string = 'Deletar'; // Título do botão Deletar
   @Input() showViewButton: boolean = false; // Controla a exibição do botão Visualizar
   @Input() viewButtonTitle: string = 'Visualizar'; // Título do botão Visualizar
+  @Input() editButtonLink: string = '';
+
+  constructor(private router: Router) {}
 
   onEdit(row: any) {
     console.log('Editando:', row);
+    if (this.editButtonLink) {
+      this.router.navigate([this.editButtonLink]);
+    }
   }
 
   onDelete(row: any) {
