@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink],
+  imports: [FormsModule, CommonModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })
@@ -21,12 +21,15 @@ export class TableComponent {
   @Input() deleteButtonTitle: string = 'Deletar'; // Título do botão Deletar
   @Input() showViewButton: boolean = false; // Controla a exibição do botão Visualizar
   @Input() viewButtonTitle: string = 'Visualizar'; // Título do botão Visualizar
+  @Input() editButtonLink: string = '';
 
-  router: any;
+  constructor(private router: Router) {}
 
   onEdit(row: any) {
     console.log('Editando:', row);
-    this.router.navigate(['/pderp/colaboradores/manutencao-colaboradores/editar-curriculo']);
+    if (this.editButtonLink) {
+      this.router.navigate([this.editButtonLink]);
+    }
   }
 
   onDelete(row: any) {
