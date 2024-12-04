@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cargos-pretendidos',
-  templateUrl: './editar-cargos-pretendidos.component.html',
-  styleUrls: ['./editar-cargos-pretendidos.component.css'],
+  templateUrl: './cargos-pretendidos.component.html',
+  styleUrls: ['./cargos-pretendidos.component.scss'],
 })
 export class CargosPretendidosComponent {
   selectedRoles: string[] = [];

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditarCargosPretendidosComponent } from './editar-cargos-pretendidos.component';
+import { CargosPretendidosComponent } from './cargos-pretendidos.component';
 
 describe('EditarCargosPretendidosComponent', () => {
-  let component: EditarCargosPretendidosComponent;
-  let fixture: ComponentFixture<EditarCargosPretendidosComponent>;
+  let component: CargosPretendidosComponent;
+  let fixture: ComponentFixture<CargosPretendidosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditarCargosPretendidosComponent]
+      imports: [CargosPretendidosComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(EditarCargosPretendidosComponent);
+
+    fixture = TestBed.createComponent(CargosPretendidosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

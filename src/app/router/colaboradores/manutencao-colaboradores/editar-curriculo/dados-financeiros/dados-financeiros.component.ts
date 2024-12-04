@@ -16,7 +16,7 @@ export class DadosFinanceirosComponent {
     { id: 'personal-data', label: 'Dados Pessoais', link: '/dados-pessoais' },
     { id: 'financial-data', label: 'Dados Financeiros', link: 'dados-financeiros'  },
     { id: 'languages', label: 'Idiomas', link: ''  },
-    { id: 'positions', label: 'Cargos Pretendidos', link: ''  },
+    { id: 'positions', label: 'Cargos Pretendidos', link: 'cargos-pretendidos'  },
     { id: 'previous-employment', label: 'Emprego Anteriores', link: ''  },
     { id: 'skills', label: 'Conhecimentos Específicos', link: ''  },
     { id: 'search-employees', label: 'Pesquisar Colaboradores', link: ''  },
