@@ -39,7 +39,7 @@ export const routes: Routes = [
       { path: 'pderp/biblioteca/livros', component: LivrosComponent},
       { path: 'pderp/colaboradores/manutencao-colaboradores/editar-curriculo', component: EditarCurriculoComponent},
       { path: 'pderp/colaboradores/manutencao-colaboradores/editar-curriculo/dados-financeiros', component: DadosFinanceirosComponent},
-      { path: 'pderp/colaboradores/manutencao-colaboradores/cargos-pretendidos', component: CargosPretendidosComponent},
+      { path: 'pderp/colaboradores/manutencao-colaboradores/editar-curriculo/cargos', component: CargosPretendidosComponent},
     ]
   }
 ];

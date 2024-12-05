@@ -1,4 +1,3 @@
-import { DadosFinanceirosComponent } from './dados-financeiros/dados-financeiros.component';
 import { Component } from '@angular/core';
 import { CardComponent } from "../../../../components/form-components/card/card.component";
 import { NavTabsComponent, Tab } from '../../../../components/form-components/nav-tabs/nav-tabs.component';
