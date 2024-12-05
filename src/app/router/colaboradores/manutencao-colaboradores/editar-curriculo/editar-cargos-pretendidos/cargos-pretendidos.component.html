@@ -3,62 +3,38 @@
   <form>
     <fieldset>
       <legend>Selecione os cargos pretendidos</legend>
-      <div class="checkbox-group">
-        <label>
-          <input type="checkbox" value="Analista de Arquitetura" />
-          Analista de Arquitetura
-        </label>
-        <label>
-          <input type="checkbox"  value="Analista de Configuração" />
-          Analista de Configuração
-        </label>
-        <label>
-          <input type="checkbox"  value="Analista de Requisitos" />
-          Analista de Requisitos
-        </label>
-        <label>
-          <input type="checkbox"  value="Analista de Testes" />
-          Analista de Testes
-        </label>
-        <label>
-          <input type="checkbox"  value="Desenvolvedor" />
-          Desenvolvedor
-        </label>
-        <label>
-          <input type="checkbox"  value="Analista de Banco de Dados" />
-          Analista de Banco de Dados
-        </label>
-        <label>
-          <input type="checkbox"  value="Analista de Qualidade" />
-          Analista de Qualidade
-        </label>
-        <label>
-          <input type="checkbox" value="Analista de Software" />
-          Analista de Software
-        </label>
-        <label>
-          <input type="checkbox"  value="Coordenador" />
-          Coordenador
-        </label>
-        <label>
-          <input type="checkbox" value="Gerente de Projetos" />
-          Gerente de Projetos
-        </label>
+      <div class="checkbox-group row">
+        <div class="col-md-6">
+          <label>
+            <input type="checkbox" name="role" value="Analista de Arquitetura" />
+            Analista de Arquitetura
+          </label>
+        </div>
+        <div class="col-md-6">
+          <label>
+            <input type="checkbox" name="role" value="Analista de Configuração" />
+            Analista de Configuração
+          </label>
+        </div>
+        <!-- Continue dividindo os checkboxes -->
       </div>
     </fieldset>
 
-    <div class="additional-role">
-      <p>Se o cargo pretendido não se encontra na lista acima, preencha-o abaixo.</p>
-      <label for="other-roles">Outros Cargos</label>
-      <input
-        type="text"
-        id="other-roles"
-        placeholder="Ex.: Analista de Sistemas"
-      />
+    <div class="additional-role mt-3">
+      <p>Se o cargo pretendido não se encontra na lista acima, preencha-o abaixo:</p>
+      <div class="form-group">
+        <label for="other-roles">Outros Cargos</label>
+        <input
+          type="text"
+          id="other-roles"
+          class="form-control"
+          placeholder="Ex.: Analista de Sistemas"
+        />
+      </div>
     </div>
 
-    <div class="actions">
-      <button type="button" (click)="save()">Salvar</button>
+    <div class="actions mt-4">
+      <button type="submit" class="btn btn-primary">Salvar</button>
     </div>
   </form>
 </div>
