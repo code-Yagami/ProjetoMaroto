@@ -1,8 +1,6 @@
-import { Routes } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { LoginComponent } from './components/login/login.component';
-
 import { DespesaComponent } from './router/financeiro/despesa/despesa.component';
 import { SenhaComponent } from './router/administracao-acesso/senha/senha.component';
 import { InicioComponent } from './router/inicio/inicio/inicio.component';
