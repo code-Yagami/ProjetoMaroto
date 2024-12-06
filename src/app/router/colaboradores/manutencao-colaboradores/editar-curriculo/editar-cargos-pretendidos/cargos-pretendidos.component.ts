@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Tab } from '../../../../../components/form-components/nav-tabs/nav-tabs.component';
+import { NavbarComponent } from "../../../../../components/navbar/navbar.component";
 import { ButtonComponentComponent } from "../../../../../components/form-components/button-component/button-component.component";
 
 @Component({
   selector: 'app-cargos-pretendidos',
   standalone: true,
-  imports: [CommonModule, ButtonComponentComponent],
+  imports: [CommonModule, NavbarComponent, ButtonComponentComponent],
   templateUrl:'./cargos-pretendidos.component.html',
   styleUrls: ['./cargos-pretendidos.component.scss'],
 })
