@@ -18,12 +18,12 @@
 
     <div class="row mb-3">
       <div class="col-md-4">
-        <label>N° CD's </label>
+        <label>N° CD's</label>
         <app-input-component></app-input-component>
       </div>
       <div class="col-md-4">
         <label>Linguagem</label>
-        <app-select-component [options]="statusOptions"></app-select-component>
+        <app-select-component [options]="linguagemOptions"></app-select-component>
       </div>
       <div class="col-md-4">
         <label>Tipo</label>
@@ -31,7 +31,18 @@
       </div>
     </div>
 
-    <app-table></app-table>
+    <app-table
+      [columns]="[
+        { header: 'Nome', key: 'nome' },
+        { header: 'Serial', key: 'serial' },
+        { header: 'Nº CD\'s', key: 'numCds' },
+        { header: 'Linguagem', key: 'linguagem' },
+        { header: 'Tipo', key: 'tipo' },
+        { header: 'Status', key: 'status' },
+        { header: 'Ações', key: 'acoes' }
+      ]"
+      [tableData]="tableData"
+    ></app-table>
   </app-card>
 
 </div>
