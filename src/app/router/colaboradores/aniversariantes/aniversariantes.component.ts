@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
-import { LayoutComponent } from '../../../components/layout/layout.component';
-import { InputComponentComponent } from "../../../components/form-components/input-component/input-component.component";
-import { ButtonComponentComponent } from "../../../components/form-components/button-component/button-component.component";
 import { CardComponent } from "../../../components/form-components/card/card.component";
-import { DataComponentComponent } from "../../../components/form-components/data-component/data-component.component";
-import { NumberComponentComponent } from "../../../components/form-components/number-component/number-component.component";
-import { TableComponent } from "../../../components/form-components/table/table.component";
 @Component({
   selector: 'app-aniversarios',
   standalone: true,
-  imports: [LayoutComponent, InputComponentComponent, ButtonComponentComponent, CardComponent, DataComponentComponent, NumberComponentComponent, TableComponent],
+  imports: [CardComponent],
   templateUrl: './aniversariantes.component.html',
   styleUrls: ['./aniversariantes.component.scss']
 })
